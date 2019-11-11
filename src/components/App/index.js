@@ -53,7 +53,7 @@ class App extends Component {
           <Navbar.Header>
             <Navbar.Brand>
               <a href="/">
-                <i className="fab fa-ethereum" /> Block Explorer
+                <i className="fab fa-ethereum" /> Fuko Blockchain Explorer
               </a>
             </Navbar.Brand>
           </Navbar.Header>
