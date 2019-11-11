@@ -34,3 +34,13 @@ export const web3_eth_getBlock = (i, opt = true) => {
   });
 };
 
+export const web3_eth_hashrate = () => {
+  return new Promise((resolve, reject) => {
+    web3.eth.getHashrate((err, data) => {
+      if (err) {
+        reject(err);
+      }
+      resolve(data);
+    });
+  });
+};
