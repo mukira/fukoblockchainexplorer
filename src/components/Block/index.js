@@ -20,4 +20,11 @@ class Block extends Component {
     await this.getBlockState(block_hash);
   }
   
+  async componentWillReceiveProps(nextprops) {
+    var block_hash_old = this.props.match.params.blockHash;
+    var block_hash_new = nextProps.match.params.blockHash;
+
+    if (block_hash_old !== block_hash_new)
+    await this.getBlockState(block_hash_new);
+  }
 }
