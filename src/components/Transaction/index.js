@@ -41,3 +41,79 @@ class Transaction extends Component {
       tx: currTxObj
     });
   }
+
+  render() {
+    const tx = this.state.tx;
+
+    if (!tx) {
+      return <pre>loading...</pre>;
+    }
+    const value = parseInt(tx.value, 10) / 1000000000000000000;
+    //    const difficultyTotal = parseInt(block.totalDifficulty, 10);
+    return (
+      <div className="Transaction container">
+        <br />
+        <h2>
+          <i className="far fa-file-code" /> Transaction Info
+        </h2>
+        <div>
+          <table>
+            <tbody>
+              <tr>
+                <td className="tdLabel">Tx Hash: </td>
+                <td>{tx.hash}</td>
+              </tr>
+              <tr>
+                <td className="tdLabel">Tx Status: </td>
+                <td>{tx.status}</td>
+              </tr>
+              <tr>
+                <td className="tdLabel">Block Hash: </td>
+                <td>
+                  <Link to={`../block/${tx.blockHash}`}>{tx.blockHash}</Link>
+                </td>
+              </tr>
+              <tr>
+                <td className="tdLabel">Block Number: </td>
+                <td>{tx.blockNumber}</td>
+              </tr>
+              <tr>
+                <td className="tdLabel">From: </td>
+                <td>
+                  <Link to={`../address/${tx.from}`}>{tx.from}</Link>
+                </td>
+              </tr>
+              <tr>
+                <td className="tdLabel">To: </td>
+                <td>
+                  <Link to={`../address/${tx.to}`}>{tx.to}</Link>
+                </td>
+              </tr>
+              <tr>
+                <td className="tdLabel">Value: </td>
+                <td>{value}</td>
+              </tr>
+              <tr>
+                <td className="tdLabel">Gas: </td>
+                <td>{tx.gas}</td>
+              </tr>
+              <tr>
+                <td className="tdLabel">Gas Price: </td>
+                <td>{tx.gasPrice.c[0]}</td>
+              </tr>
+              <tr>
+                <td className="tdLabel">Input: </td>
+                <td>{tx.input}</td>
+              </tr>
+              <tr>
+                <td className="tdLabel">Nonce: </td>
+                <td>{tx.nonce}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    );
+  }
+}
+export default Transaction;
