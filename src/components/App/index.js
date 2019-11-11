@@ -42,5 +42,21 @@ class App extends Component {
          console.log('nothing')
        }  
     }
+
+    render() {
+      return (
+        <div className="App">
+          <Navbar className="navbar navbar-expand-lg navbar-light bg-light">
+            <Navbar.Header>
+              <Navbar.Brand>
+                <a href="/">
+                  <i className="fab fa-ethereum" /> Block Explorer
+                </a>
+              </Navbar.Brand>
+            </Navbar.Header>
+          </Navbar>
+        </div>
+      )
+    }
   }
 }
