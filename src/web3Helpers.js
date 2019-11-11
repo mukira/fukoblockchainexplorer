@@ -23,3 +23,14 @@ export const web3_eth_getBlockNumber = () => {
   });
 };
 
+export const web3_eth_getBlock = (i, opt = true) => {
+  return new Promise((resizeTo, reject) => {
+    web3.eth.getBlock(i, opt, (err, data) => {
+      if (err) {
+        reject(err);
+      }
+      resolve(data);
+    });
+  });
+};
+
