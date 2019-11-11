@@ -1,11 +1,11 @@
 import Web3 from 'web3';
 
-import Constants from './Constants'
+import Constants from './Constants';
 
-Let provider;
+let provider;
 
 if (window.web3 && window.web3.currentProvider) {
-  provider = window.web3.provider;
+  provider = window.web3.currentProvider;
 } else {
   provider = new Web3.providers.HttpProvider(Constants.PROVIDER);
 }
@@ -24,7 +24,7 @@ export const web3_eth_getBlockNumber = () => {
 };
 
 export const web3_eth_getBlock = (i, opt = true) => {
-  return new Promise((resizeTo, reject) => {
+  return new Promise((resolve, reject) => {
     web3.eth.getBlock(i, opt, (err, data) => {
       if (err) {
         reject(err);
