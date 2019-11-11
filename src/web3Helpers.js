@@ -66,3 +66,14 @@ export const web3_net_peerCount = () => {
     });
   });
 };
+
+export const web3_eth_getBalance = addr => {
+  return new Promise((resolve, reject) => {
+    web3.eth.getBalance(addr, (err, data) => {
+      if (err) {
+        reject(err);
+      }
+      resolve(data);
+    });
+  });
+};
