@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import './style.css'
-import _ from 'lodash'
+import {ResponsiveContainer, ScatterChart, Scatter, XAxis, YAxis, ZAxis, Tooltip} from 'recharts';
 
-class AvgTxCount extends Component {
+class BlockMoons extends Component {
   
   constructor(props) {
     super(props);
@@ -17,13 +17,12 @@ class AvgTxCount extends Component {
   }
   
   getDataState(data) {
-
     // Set the Component state
     this.setState({
       data: data
     })
   }
-
+  
   render() {
     const data = this.state.data;
     var chartData = []
