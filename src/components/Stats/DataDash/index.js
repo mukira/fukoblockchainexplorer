@@ -28,3 +28,64 @@ class DataDash extends Component {
       data: data
     });
   }
+
+  render() {
+    if (!this.state.data || !this.state.data.blocks.length) {
+      return;
+    }
+    
+    let data = this.state.data;
+
+    console.log(data)
+
+
+
+    const difficulty = parseInt(data.blocks[0].difficulty, 10);
+    const gasPrice = parseInt(data.gasPrice, 10);
+    const gasLimit = parseInt(data.blocks[0].gasLimit, 10);
+    return (
+      <div className="DataDash">
+        <h2>
+          <i className="fas fa-link" /> Stats
+        </h2>
+        <div>
+          <table>
+            <tbody>
+              <tr>
+                <td className="tdLabel">Height: </td>
+                <td>{data.curr_block}</td>
+              </tr>
+              <tr>
+                <td className="tdLabel">Timestamp: </td>
+                <td>{data.blocks[0].timestamp}</td>
+              </tr>
+              <tr>
+                <td className="tdLabel">Hashrate: </td>
+                <td>{data.hashrate}</td>
+              </tr>
+              <tr>
+                <td className="tdLabel">Gas Price: </td>
+                <td>{gasPrice}</td>
+              </tr>
+              <tr>
+                <td className="tdLabel">Gas Limit: </td>
+                <td>{gasLimit}</td>
+              </tr>
+              <tr>
+                <td className="tdLabel">Dificulty: </td>
+                <td>{difficulty}</td>
+              </tr>
+              <tr>
+                <td className="tdLabel">Peer Count: </td>
+                <td>{data.peerCount}</td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+        </div>
+      </div>
+    );
+  }
+}
+
+export default DataDash;
