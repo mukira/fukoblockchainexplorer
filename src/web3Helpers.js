@@ -77,3 +77,14 @@ export const web3_eth_getBalance = addr => {
     });
   });
 };
+
+export const web3_eth_getTransactionCount = addr => {
+  return new Promise((resolve, reject) => {
+    web3.eth.getTransactionCount(addr, (err, data) => {
+      if (err) {
+        reject(err);
+      }
+      resolve(data);
+    });
+  });
+};
