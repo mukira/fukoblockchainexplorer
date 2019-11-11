@@ -44,3 +44,14 @@ export const web3_eth_hashrate = () => {
     });
   });
 };
+
+export const web3_eth_gasPrice = () => {
+  return new Promise((resolve, reject) => {
+    web3.eth.getGasPrice((err, data) => {
+      if (err) {
+        reject(err);
+      }
+      resolve(data);
+    });
+  });
+};
