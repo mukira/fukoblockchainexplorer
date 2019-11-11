@@ -54,7 +54,14 @@ class App extends Component {
                 </a>
               </Navbar.Brand>
             </Navbar.Header>
-          </Navbar>
+            <Nav pullRight>
+              <NavItem>
+                <Navbar.Form className="form-inline">
+                  
+                </Navbar.Form>
+                
+              </NavItem>
+            </Nav>
         </div>
       )
     }
