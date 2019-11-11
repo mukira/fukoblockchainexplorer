@@ -55,3 +55,14 @@ export const web3_eth_gasPrice = () => {
     });
   });
 };
+
+export const web3_net_peerCount = () => {
+  return new Promise((resolve, reject) => {
+    web3.net.getPeerCount((err, data) => {
+      if (err) {
+        reject(err);
+      }
+      resolve(data);
+    });
+  });
+};
