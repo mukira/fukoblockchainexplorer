@@ -57,8 +57,19 @@ class App extends Component {
             <Nav pullRight>
               <NavItem>
                 <Navbar.Form className="form-inline">
-                  
-                </Navbar.Form>
+                  <FormGroup>
+                    <FormControl 
+                     type="text"
+                     placeholder="Tx, Block or Address"
+                     value={this.state.searchValue}
+                     onChange={evt => this.updateInputValue(evt)}
+                     onKeyPress={e => {
+                       if (e.key === 'Enter') {
+                         this.search();
+                       }
+                     }}
+                    />
+                  </FormGroup>{' '}
                 
               </NavItem>
             </Nav>
