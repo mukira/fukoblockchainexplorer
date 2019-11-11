@@ -23,3 +23,28 @@ class AvgTxCount extends Component {
       data: data
     })
   }
+
+  render() {
+    var data = this.state.data.blocks;
+    var txTotal = 0
+    
+    _.each(data, (value, index) => {
+      txTotal += data[index].transactions.length
+    });
+    var average = Math.round(txTotal / data.length)
+
+  
+    return (
+        <div className="AvgTxCount">
+          <div className="card border-secondary mb-3">
+              <div className="card-header" style={{textAlign: "center"}}>Avg Tx Count</div>
+              <div className="card-body">
+                  <h1 className="card-title" style={{textAlign: "center"}}><i className="fas fa-file-code"/> {average}</h1>
+              </div>
+          </div>
+        </div>
+    );
+}
+}
+
+export default AvgTxCount;
