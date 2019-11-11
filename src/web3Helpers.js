@@ -99,3 +99,14 @@ export const web3_eth_getTransactionByHash = hash => {
     });
   });
 };
+
+export const web3_eth_getTransactionReceipt = hash => {
+  return new Promise((resolve, reject) => {
+    web3.eth.getTransactionReceipt(hash, (err, data) => {
+      if (err) {
+        reject(err);
+      }
+      resolve(data);
+    });
+  });
+};
