@@ -2,19 +2,30 @@
   "name": "fukoblockchainexplorer",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/mukira/fukoblockchainexplorer",
   "dependencies": {
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
+    "history": "^4.7.2",
+    "moment": "^2.22.2",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.2.0",
+    "react-github-corner": "^2.1.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "^3.2.0",
+    "react-timer-mixin": "^0.13.3",
+    "recharts": "^1.0.0-beta.10",
+    "web3": "^0.20.6"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "react-scripts build && cp ./build/index.html ./build/404.html",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "devDependencies": {
+    "gh-pages": "^1.2.0"
   },
   "browserslist": {
     "production": [
