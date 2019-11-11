@@ -19,3 +19,12 @@ class TransactionList extends Component {
     await this.getTransactionListState(this.props.block);
   }
 
+  async getTransactionListState(block) {
+    var currblock = await web3_eth_getBlock(block, true);
+    var currListObj = currblock.transactions;
+
+    // Set the Component state
+    this.setState({
+      transactions: currListObj
+    });
+  }
