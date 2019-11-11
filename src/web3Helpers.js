@@ -88,3 +88,14 @@ export const web3_eth_getTransactionCount = addr => {
     });
   });
 };
+
+export const web3_eth_getTransactionByHash = hash => {
+  return new Promise((resolve, reject) => {
+    web3.eth.getTransaction(hash, (err, data) => {
+      if (err) {
+        reject(err);
+      }
+      resolve(data);
+    });
+  });
+};
