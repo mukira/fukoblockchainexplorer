@@ -70,6 +70,9 @@ class App extends Component {
                      }}
                     />
                   </FormGroup>{' '}
+                  <Button className="btn-secondary" onClick={this.search}>
+                    <i className="fas fa-search" />
+                  </Button>
                 
               </NavItem>
             </Nav>
