@@ -48,3 +48,20 @@ class LastBlock extends Component {
   componentWillUnmount() {
     TimerMixin.clearTimeout(this.timer);
   }
+  
+  render() {
+    
+      return (
+          <div className="LastBlock">
+            <div className="card border-secondary mb-3">
+              <div className="card-header" style={{textAlign: "center"}}>Last Block</div>
+              <div className="card-body">
+                <h1 className="card-title" style={{textAlign: "center"}}><i className="fas fa-hourglass-half"/> {this.state.count}s</h1>
+              </div>
+            </div>
+          </div>
+      );
+  }
+}
+
+export default LastBlock;
