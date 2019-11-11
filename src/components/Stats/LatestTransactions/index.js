@@ -22,3 +22,41 @@ class LatestTransactions extends Component {
       data: data
     });
   }
+
+  render() {
+    var data = this.state.data;
+
+    var tableRows = [];
+
+    _.each(data.blocks[0].transactions, (value, index) => {
+      if (index > 9) return false;
+      let hash = value.hash ? value.hash : value;
+
+      tableRows.push(
+        // required for ganache...
+        <tr key={hash}>
+          <td>
+            <small>
+              <Link to={`/tx/${hash}`}>{hash}</Link>
+            </small>
+          </td>
+        </tr>
+      );
+    });
+    return (
+      <div className="LatestTransactions">
+        <h2>Latest Transactions</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Tx Hash</th>
+            </tr>
+          </thead>
+          <tbody>{tableRows}</tbody>
+        </table>
+      </div>
+    );
+  }
+}
+
+export default LatestTransactions;
