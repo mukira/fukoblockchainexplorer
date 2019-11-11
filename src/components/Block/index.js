@@ -42,4 +42,9 @@ class Block extends Component {
       block: currBlockObj
     });
   }
-
+render() {
+  const block = this.state.block;
+  if (!block.difficulty) {
+    return <pre>loading...</pre>;
+  }
+}
