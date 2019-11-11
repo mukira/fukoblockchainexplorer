@@ -21,4 +21,26 @@ class App extends Component {
     this.state = {
       searchValue: ''
     };
-
+  // This binding is necessary to make 'this' work in callback
+  this.search = this.search.bind(this);
+  }
+  async search(e) {
+    const history = createhistory({ forceRefresh: true });
+    if (this.state.searchValue.length === 42) {
+      //adress
+      history.push('/adress/' + this.state.searchValue);
+    } else if (this.state.searchValue.length === 66){
+      // block or tx
+      if (await web3_eth_getTransactionByHash(this.state.searchValue)) {
+        // transaction
+        history.push('/tx/' + this.state.searchValue);
+        } else {
+          //block
+          history.push('/block/' + this.state.searchValue);
+        }
+       } else {
+         console.log('nothing')
+       }  
+    }
+  }
+}
