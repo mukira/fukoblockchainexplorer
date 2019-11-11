@@ -6,6 +6,8 @@ import Address from './../Address';
 import Home from './../Home';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
+import { AppView, AppBar, NavigationBar } from '@aragon/ui'
+
 import {
   Navbar,
   Nav,

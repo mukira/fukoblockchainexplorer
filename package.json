@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "https://github.com/mukira/fukoblockchainexplorer",
   "dependencies": {
+    "@aragon/ui": "^0.40.2",
+    "@babel/core": "^7.7.2",
     "history": "^4.7.2",
     "moment": "^2.22.2",
     "react": "^16.2.0",
@@ -14,6 +16,7 @@
     "react-scripts": "^3.2.0",
     "react-timer-mixin": "^0.13.3",
     "recharts": "^1.0.0-beta.10",
+    "styled-components": "^4.4.1",
     "web3": "^0.20.6"
   },
   "scripts": {
