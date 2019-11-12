@@ -43,7 +43,7 @@ class App extends Component {
   render() {
     return (
       <Main>
-      <AppView
+      <AppView 
       appBar={
         <AppBar title="Fuko Blockchain Explorer">
           <NavigationBar
