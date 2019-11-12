@@ -43,13 +43,9 @@ class App extends Component {
   render() {
     return (
       <Main>
-      <AppView 
-      appBar={
+     
         <AppBar title="Fuko Blockchain Explorer">
-          <NavigationBar
-          
-          />
-                  <TextInput
+                 <TextInput
                     type="text"
                     placeholder="Tx, Block or Address"
                     value={this.state.searchValue}
@@ -62,8 +58,7 @@ class App extends Component {
                   />
                 <Button mode="strong" onClick={this.search}>Search</Button>
         </AppBar>
-      }
-    >
+      
       <h1>Fuko Blockchain Explorer</h1>
 
       <div>       
@@ -97,7 +92,6 @@ class App extends Component {
           }
         </div>
       </div>
-      </AppView>
       </Main>
     );
   }
