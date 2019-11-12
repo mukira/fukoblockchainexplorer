@@ -6,7 +6,7 @@ import Address from './../Address';
 import Home from './../Home';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
-import { Main, AppView, AppBar, Button, TextInput } from '@aragon/ui'
+import { Main, AppBar, Button, TextInput } from '@aragon/ui'
 
 import {
   FormGroup,
@@ -46,7 +46,6 @@ class App extends Component {
   render() {
     return (
       <Main>
-        <AppView>
   <AppBar>
               <a href="/">
                 <i className="fab fa-ethereum" /> Fuko Blockchain Explorer
@@ -65,11 +64,12 @@ class App extends Component {
                     }}
                   />
                 </FormGroup>{' '}
-                <Button className="btn-secondary" onClick={this.search}>
-                  <i className="fas fa-search" />
+                <Button mode="strong" onClick={this.search}>
+                  <i className="fas fa-search" /> Search
                 </Button>
  
           </AppBar>
+
         <div className="App-nav">
           {' '}
           {
@@ -98,7 +98,6 @@ class App extends Component {
             </Router>
           }
         </div>
-        </AppView>
         </Main>
     );
   }
