@@ -20,15 +20,14 @@
     "web3": "^0.20.6"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && cp ./build/index.html ./build/404.html",
+    "start": "react-scripts start && npm run sync-assets && react-scripts start",
+    "build": "react-scripts build && cp ./build/index.html ./build/404.html && npm run sync-assets && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "sync-assets": "copy-aragon-ui-assets ./public",
-    "build": "npm run sync-assets && react-scripts build",
-    "start": "npm run sync-assets && react-scripts start"
+    "sync-assets": "copy-aragon-ui-assets ./public"
+
   },
   "devDependencies": {
     "gh-pages": "^1.2.0"
