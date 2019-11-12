@@ -6,7 +6,7 @@ import Address from './../Address';
 import Home from './../Home';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
-import { Main, AppView, AppBar, NavigationBar, Button, TextInput } from '@aragon/ui'
+import { Main, AppBar, Button, TextInput } from '@aragon/ui'
 
 
 import { web3_eth_getTransactionByHash } from '../../web3Helpers';
