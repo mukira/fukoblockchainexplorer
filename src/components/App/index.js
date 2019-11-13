@@ -8,9 +8,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 import { Main, AppBar, Button, TextInput } from '@aragon/ui'
 
-import {
-  FormGroup,
-} from 'react-bootstrap';
 
 import { web3_eth_getTransactionByHash } from '../../web3Helpers';
 class App extends Component {
@@ -46,13 +43,9 @@ class App extends Component {
   render() {
     return (
       <Main>
-  <AppBar>
-              <a href="/">
-                <i className="fab fa-ethereum" /> Fuko Blockchain Explorer
-              </a>
-
-                <FormGroup>
-                  <TextInput
+  <AppBar title="Fuko Blockchain Explorer"  endContent={
+      <div>
+      <TextInput
                     type="text"
                     placeholder="Tx, Block or Address"
                     value={this.state.searchValue}
@@ -63,12 +56,11 @@ class App extends Component {
                       }
                     }}
                   />
-                </FormGroup>{' '}
+                            {' '}
                 <Button mode="strong" onClick={this.search}>
                   <i className="fas fa-search" /> Search
                 </Button>
- 
-          </AppBar>
+                </div>} />
 
         <div className="App-nav">
           {' '}
