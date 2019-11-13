@@ -6,7 +6,7 @@ import Address from './../Address';
 import Home from './../Home';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
-import { Main, AppBar, Button, TextInput } from '@aragon/ui'
+import { Main, AppBar, IconWallet, Button, TextInput } from '@aragon/ui'
 
 
 import { web3_eth_getTransactionByHash } from '../../web3Helpers';
@@ -58,11 +58,11 @@ class App extends Component {
                   />
                             {' '}
                 <Button mode="strong" onClick={this.search}>
-                  <i className="fas fa-search" /> Search
+                <IconWallet /> Search
                 </Button>
                 </div>} />
 
-        <div className="App-nav">
+        <div>
           {' '}
           {
             <Router>
