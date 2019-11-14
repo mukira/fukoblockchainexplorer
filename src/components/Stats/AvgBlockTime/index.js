@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 import _ from 'lodash';
+import { Text } from '@aragon/ui'
 
 class AvgBlockTime extends Component {
   constructor(props) {
@@ -43,12 +44,12 @@ class AvgBlockTime extends Component {
     return (
       <div className="AvgBlockTime">
         <div className="card border-secondary mb-3">
-          <div className="card-header" style={{ textAlign: 'center' }}>
+          <Text style={{ textAlign: 'center' }}><i className="fas fa-stopwatch" />
             Avg Block Time
-          </div>
+          </Text>
           <div className="card-body">
             <h1 className="card-title" style={{ textAlign: 'center' }}>
-              <i className="fas fa-stopwatch" /> {average}s
+               {average}s
             </h1>
           </div>
         </div>

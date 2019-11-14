@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './style.css'
 import _ from 'lodash'
+import { Text } from '@aragon/ui'
+
 import {ResponsiveContainer, AreaChart, Area, Tooltip, XAxis} from 'recharts';
 
 class GasUse extends Component {
@@ -40,7 +42,7 @@ class GasUse extends Component {
       return (
           <div className="GasUse">
             <div className="card border-secondary mb-3">
-                <div className="card-header" style={{textAlign: "center"}}>Gas Usage</div>
+                <Text style={{textAlign: "center"}}>Gas Usage</Text>
                 <div className="card-body">
                 <ResponsiveContainer width="100%" height={58}>
                 <AreaChart width={600} height={400} data={chartData} stackOffset="expand" margin={{top: 0, right: 0, left: 0, bottom: 0}} >

@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import './style.css'
+import { Text } from '@aragon/ui'
+
 var TimerMixin = require('react-timer-mixin');
+
 
 class LastBlock extends Component {
   
@@ -53,10 +56,10 @@ class LastBlock extends Component {
     
       return (
           <div className="LastBlock">
-            <div className="card border-secondary mb-3">
-              <div className="card-header" style={{textAlign: "center"}}>Last Block</div>
+            <div className="card mb-3">
+              <Text style={{textAlign: "center"}}><i className="fas fa-hourglass-half"/>Last Block</Text>
               <div className="card-body">
-                <h1 className="card-title" style={{textAlign: "center"}}><i className="fas fa-hourglass-half"/> {this.state.count}s</h1>
+                <h1 className="card-title" style={{textAlign: "center"}}> {this.state.count}s</h1>
               </div>
             </div>
           </div>

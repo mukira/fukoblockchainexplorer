@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './style.css'
+import { Text } from '@aragon/ui'
+
 import _ from 'lodash'
 
 class AvgTxCount extends Component {
@@ -36,10 +38,10 @@ class AvgTxCount extends Component {
   
     return (
         <div className="AvgTxCount">
-          <div className="card border-secondary mb-3">
-              <div className="card-header" style={{textAlign: "center"}}>Avg Tx Count</div>
+          <div className="card mb-3">
+              <Text style={{textAlign: "center"}}><i className="fas fa-file-code"/>Avg Tx Count</Text>
               <div className="card-body">
-                  <h1 className="card-title" style={{textAlign: "center"}}><i className="fas fa-file-code"/> {average}</h1>
+                  <h1 className="card-title" style={{textAlign: "center"}}> {average}</h1>
               </div>
           </div>
         </div>
