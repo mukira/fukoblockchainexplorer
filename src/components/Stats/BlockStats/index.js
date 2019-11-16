@@ -46,25 +46,30 @@ class BlockStats extends Component {
             width={1020}
             height={250}
             data={chartData}
-            margin={{ top: 5, right: 20, left: 10, bottom: 15 }}
+            margin={{ top: 25, right: 2, left: 2, bottom: 15 }}
           >
               <defs>
-    <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
-      <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
+    <linearGradient id="TransactionsFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="5%" stopColor="#2CA8FF" stopOpacity={1}/>
+      <stop offset="95%" stopColor="#FFFFFF" stopOpacity={0}/>
+    </linearGradient>
+    <linearGradient id="SizeFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="5%" stopColor="#18ce0f" stopOpacity={0.1}/>
+      <stop offset="95%" stopColor="#FFFFFF" stopOpacity={0}/>
     </linearGradient>
     <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="5%" stopColor="#a18cd1" stopOpacity={0.8}/>
-      <stop offset="95%" stopColor="#fbc2eb" stopOpacity={0}/>
+      <stop offset="5%" stopColor="#d4fc79" stopOpacity={0.1}/>
+      <stop offset="95%" stopColor="#96e6a1" stopOpacity={0}/>
     </linearGradient>
+
   </defs>
             <XAxis dataKey="height" />
             
             <Tooltip cursor={false} wrapperStyle={{ background: "#303030", border: 0}} />
             <Legend />
-            <Area animationEasing='ease-out' animationDuration={500} type="monotone" dataKey="transactions" stroke="#E74C3C" strokeWidth={2} yAxisId={1} dot={{ stroke: '#E74C3C', fill: '#E74C3C'  }} activeDot={{ stroke: '#E74C3C', strokeWidth: 2, r: 4 }} name="Transactions"/>
-            <Area type="monotone" animationEasing='ease-in-out' animationDuration={500} dataKey="size" stroke="#00bc8c" strokeWidth={2} yAxisId={2} dot={{ stroke: '#00bc8c', fill: '#00bc8c'  }} activeDot={{ stroke: '#00bc8c', strokeWidth: 2, r: 4 }} name="Size"/>
-            <Area type="monotone" animationEasing='linear' animationDuration={500} dataKey="gasPrice" stroke="#8884d8" strokeWidth={2} yAxisId={3} dot={{ stroke: '#a18cd1', fill: '#a18cd1'  }} activeDot={{ stroke: '#a18cd1', strokeWidth: 2, r: 4 }} name="Gas Price" fillOpacity={1} fill="url(#colorPv)" />
+            <Area animationEasing='ease-out' animationDuration={500} type="monotone" dataKey="transactions" stroke="#80b6f4" strokeWidth={2} yAxisId={1} dot={{ stroke: '#FFFFFF', fill: '#80b6f4'  }} activeDot={{ stroke: '#FFFFFF', strokeWidth: 2, r: 4 }} name="Transactions" fill="url(#TransactionsFill)"/>
+            <Area type="monotone" animationEasing='ease-in-out' animationDuration={500} dataKey="size" stroke="#18ce0f" strokeWidth={2} yAxisId={2} dot={{ stroke: '#00bc8c', fill: '#00bc8c'  }} activeDot={{ stroke: '#00bc8c', strokeWidth: 2, r: 4 }} name="Size" fillOpacity={1} fill="url(#SizeFill)"/>
+            <Area type="monotone" animationEasing='linear' animationDuration={500} dataKey="gasPrice" stroke="#96e6a1" strokeWidth={2} yAxisId={3} dot={{ stroke: '#FFFFFF', fill: '#2c2c2c'  }} activeDot={{ stroke: '#FFFFFF', strokeWidth: 2, r: 4 }} name="Gas Price" fillOpacity={1} fill="url(#colorPv)" />
           </AreaChart>
         </ResponsiveContainer>
         </div>

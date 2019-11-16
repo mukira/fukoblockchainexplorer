@@ -1,7 +1,42 @@
 import React, { Component } from 'react';
+import { Line, Bar } from "react-chartjs-2";
+
 import './style.css';
+// reactstrap components
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  CardTitle,
+  Row,
+  Col,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  Table,
+  Button,
+  Label,
+  FormGroup,
+  Input,
+  UncontrolledTooltip
+} from "reactstrap";
+import { Grid } from 'react-bootstrap';
+
+
+// core components
+import PanelHeader from "./components/PanelHeader/PanelHeader.jsx";
+
+import {
+  dashboardPanelChart,
+  dashboardShippedProductsChart,
+  dashboardAllProductsChart,
+  dashboard24HoursPerformanceChart
+} from "./variables/charts.jsx";
+
+
 import DataDash from './DataDash';
-import { Grid, Row, Col } from 'react-bootstrap';
 
 
 import AvgBlockTime from './AvgBlockTime';
@@ -100,7 +135,22 @@ class Stats extends Component {
     }
     return (
       <div>
-        <br />
+
+     <PanelHeader
+          size="lg"
+          content={
+            <GasUse data={this.state} />
+
+          }
+        />
+         <div className="panel-header-lg">
+         <GasUse data={this.state} />
+        </div>
+
+        <div className="panel-header-lg">
+        <BlockStats data={this.state} />
+        </div>
+       
         <Grid>
           <Row className="show-grid">
             <Col xs={6} sm={4}>

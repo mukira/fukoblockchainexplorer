@@ -6,8 +6,29 @@ import Address from './../Address';
 import Home from './../Home';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
-import { Main, AppBar, IconWallet, Button, TextInput } from '@aragon/ui'
+import { Text,IconWallet } from '@aragon/ui'
 
+
+
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  Container,
+  InputGroup,
+  InputGroupText,
+  InputGroupAddon,
+  Input,
+  FormGroup,
+  Button
+} from 'reactstrap';
 
 import { web3_eth_getTransactionByHash } from '../../web3Helpers';
 class App extends Component {
@@ -42,10 +63,17 @@ class App extends Component {
 
   render() {
     return (
-      <Main>
-  <AppBar title="Fuko Blockchain Explorer"  endContent={
-      <div>
-      <TextInput
+      <div className="App">
+        <Navbar className="navbar-absolute fixed-top navbar-transparent  navbar navbar-expand-lg bg-transparent" >
+             <Text color="#000000" href="/">
+                <i className="fab fa-ethereum" /> Fuko Blockchain Explorer
+              </Text>
+            
+          <Nav className="justify-content-end collapse navbar-collapse">
+            <NavItem>
+            <form>
+            <InputGroup className="no-border">
+                  <Input placeholder
                     type="text"
                     placeholder="Tx, Block or Address"
                     value={this.state.searchValue}
@@ -56,13 +84,20 @@ class App extends Component {
                       }
                     }}
                   />
-                            {' '}
-                <Button mode="strong" onClick={this.search}>
-                <IconWallet /> Search
-                </Button>
-                </div>} />
+                                  <InputGroupAddon addonType="append">
 
-        <div>
+                <InputGroupText>
+                <IconWallet onClick={this.search} />
+                </InputGroupText>
+                </InputGroupAddon>
+                </InputGroup>
+                </form>
+    
+
+            </NavItem>
+          </Nav>
+        </Navbar>
+        <div className="App-nav">
           {' '}
           {
             <Router>
@@ -90,7 +125,7 @@ class App extends Component {
             </Router>
           }
         </div>
-        </Main>
+      </div>
     );
   }
 
