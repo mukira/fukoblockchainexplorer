@@ -65,9 +65,9 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar className="navbar-absolute fixed-top navbar-transparent  navbar navbar-expand-lg bg-transparent" >
-             <Text color="#000000" href="/">
+             <a className="navbar-brand" href="/">
                 <i className="fab fa-ethereum" /> Fuko Blockchain Explorer
-              </Text>
+              </a>
             
           <Nav className="justify-content-end collapse navbar-collapse">
             <NavItem>
