@@ -46,7 +46,7 @@ class GasUse extends Component {
                 <div className="card-body">
                 <ResponsiveContainer width="100%" height={280}>
                 <AreaChart width={1020} height={800} data={chartData} stackOffset="expand" margin={{top: 0, right: 0, left: 0, bottom: 0}} >
-                <Tooltip cursor={false} wrapperStyle={{ background: "#303030", border: 0}} coordinate={{ x: 100, y: 140 }} offset={50} />
+                <Tooltip cursor={false} wrapperStyle={{ background: "#FFFFFF", border: 0}} coordinate={{ x: 100, y: 140 }} offset={50} />
                 <XAxis dataKey="block" type="number" domain={['auto', 'auto']} tickCount={0} tickSize={0} tick={false} axisLine={false} hide={true}/>
                 <Area type='monotone' animationDuration={500} animationEasing="ease-in" dataKey='b' name="Gas Used" stackId="1" stroke='#E74C3C' fill='#E74C3C' />
                 <Area type='monotone' animationDuration={500} animationEasing="ease-in-out" dataKey='a' name="Unused Gas Limit" stackId="1" stroke='#00bc8c' fill='#00bc8c' />
