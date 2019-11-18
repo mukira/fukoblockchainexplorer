@@ -65,13 +65,13 @@ class BlockStats extends Component {
                   <stop offset="95%" stopColor="#FFFFFF" stopOpacity={0} />
                 </linearGradient>
               </defs>
-              <XAxis dataKey="height" />
+              <XAxis axisLine={false} dataKey="height" tick={false} >
+               </XAxis>
 
               <Tooltip
                 cursor={false}
                 wrapperStyle={{ background: "#303030", border: 0 }}
               />
-              <Legend />           
               <Area
                 type="monotone"
                 animationEasing="linear"
