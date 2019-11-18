@@ -9,17 +9,7 @@ import {
   CardFooter,
   CardTitle,
   Row,
-  Col,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  Table,
-  Button,
-  Label,
-  FormGroup,
-  Input,
-  UncontrolledTooltip
+  Col
 } from "reactstrap";
 import { Grid } from "react-bootstrap";
 
@@ -127,66 +117,66 @@ class Stats extends Component {
     return (
       <div>
         <PanelHeader size="lg" content={<GasUse data={this.state} />} />
-        <div class="card-stats card-raised card">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-3">
-                <div class="statistics">
-                  <div class="info">
-                    <div class="icon icon-primary">
-                      <i class="now-ui-icons ui-2_chat-round"></i>
+        <div className="content">
+          <div class="card-stats card-raised card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="statistics">
+                    <div class="info">
+                      <div class="icon icon-primary">
+                        <i class="now-ui-icons ui-2_chat-round"></i>
+                      </div>
+                      <h5 class="info-title">
+                        <AvgBlockTime data={this.state} />
+                      </h5>
+                      <h6 class="stats-title">Avg Block Time</h6>
                     </div>
-                    <h3 class="info-title">
-                      <AvgBlockTime data={this.state} />
-                    </h3>
-                    <h6 class="stats-title">Avg Block Time</h6>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-3">
-                <div class="statistics">
-                  <div class="info">
-                    <div class="icon icon-success">
-                      <i class="now-ui-icons business_money-coins"></i>
+                <div class="col-md-3">
+                  <div class="statistics">
+                    <div class="info">
+                      <div class="icon icon-success">
+                        <i class="now-ui-icons business_money-coins"></i>
+                      </div>
+                      <h5 class="info-title">
+                        <LastBlock data={this.state} />
+                      </h5>
+                      <h6 class="stats-title">Last Block</h6>
                     </div>
-                    <h3 class="info-title">
-                      <LastBlock data={this.state} />
-                    </h3>
-                    <h6 class="stats-title">Last Block</h6>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-3">
-                <div class="statistics">
-                  <div class="info">
-                    <div class="icon icon-info">
-                      <i class="now-ui-icons users_single-02"></i>
+                <div class="col-md-3">
+                  <div class="statistics">
+                    <div class="info">
+                      <div class="icon icon-info">
+                        <i class="now-ui-icons users_single-02"></i>
+                      </div>
+                      <h5 class="info-title">
+                        <AvgTxCount data={this.state} />
+                      </h5>
+                      <h6 class="stats-title">Avg Tx Count</h6>
                     </div>
-                    <h3 class="info-title">
-                      <AvgTxCount data={this.state} />
-                    </h3>
-                    <h6 class="stats-title">Avg Tx Count</h6>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-3">
-                <div class="statistics">
-                  <div class="info">
-                    <div class="icon icon-danger">
-                      <i class="now-ui-icons objects_support-17"></i>
+                <div class="col-md-3">
+                  <div class="statistics">
+                    <div class="info">
+                      <div class="icon icon-danger">
+                        <i class="now-ui-icons objects_support-17"></i>
+                      </div>
+                      <h5 class="info-title">
+                        <TxPerSec data={this.state} />
+                      </h5>
+                      <h6 class="stats-title">Tx / Sec</h6>
                     </div>
-                    <h3 class="info-title">
-                      <TxPerSec data={this.state} />
-                    </h3>
-                    <h6 class="stats-title">Tx / Sec</h6>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="content">
           <Row>
             <Col xs={12} md={4}>
               <Card className="card-chart">
