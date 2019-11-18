@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import _ from 'lodash';
-import { Link } from 'react-router-dom';
-import './style.css';
+import React, { Component } from "react";
+import _ from "lodash";
+import { Link } from "react-router-dom";
+import "./style.css";
 
 // reactstrap components
 import { Table } from "reactstrap";
@@ -47,7 +47,6 @@ class LatestTransactions extends Component {
       );
     });
     return (
-               
       <div className="LatestTransactions">
         <h2>Latest Transactions</h2>
         <Table responsive>
