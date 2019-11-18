@@ -57,11 +57,10 @@
   height: 260px;
   padding-top: 80px;
   padding-bottom: 45px;
-  background: #141E30;  /* fallback for old browsers */
-  background: -webkit-gradient(linear, left top, right top, from(#0c2646), color-stop(60%, #204065), to(#2a5788));
-  background: linear-gradient(to right, #0c2646 0%, #204065 60%, #2a5788 100%);
-  position: relative;
-  overflow: hidden;
+  background: #13BC7E;
+background: -webkit-linear-gradient(top left, #13BC7E, #5914AE);
+background: -moz-linear-gradient(top left, #13BC7E, #5914AE);
+background: linear-gradient(to bottom right, #13BC7E, #5914AE);
 
   .header{
     .title{

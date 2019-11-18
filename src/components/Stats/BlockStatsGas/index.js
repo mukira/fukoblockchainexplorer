@@ -4,7 +4,6 @@ import {
   ResponsiveContainer,
   AreaChart,
   XAxis,
-  Legend,
   Tooltip,
   Area
 } from "recharts";
@@ -54,19 +53,12 @@ class BlockStats extends Component {
               margin={{ top: 25, right: 2, left: 2, bottom: 15 }}
             >
               <defs>
-              <linearGradient
-                  id="GasFill"
-                  x1="0"
-                  y1="0"
-                  x2="0"
-                  y2="1"
-                >
+                <linearGradient id="GasFill" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="5%" stopColor="#f96332" stopOpacity={1} />
                   <stop offset="95%" stopColor="#FFFFFF" stopOpacity={0} />
                 </linearGradient>
               </defs>
-              <XAxis axisLine={false} dataKey="height" tick={false} >
-               </XAxis>
+              <XAxis axisLine={false} dataKey="height" tick={false}></XAxis>
 
               <Tooltip
                 cursor={false}
@@ -80,7 +72,7 @@ class BlockStats extends Component {
                 stroke="#f96332"
                 strokeWidth={2}
                 yAxisId={3}
-               // dot={{ stroke: "#f96332", fill: "#f96332" }}
+                // dot={{ stroke: "#f96332", fill: "#f96332" }}
                 activeDot={{ stroke: "#FFFFFF", strokeWidth: 2, r: 4 }}
                 name="Gas Price"
                 fillOpacity={1}

@@ -6,26 +6,16 @@ import Address from "./../Address";
 import Home from "./../Home";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import createHistory from "history/createBrowserHistory";
-import { Text, IconWallet } from "@aragon/ui";
+import { IconWallet } from "@aragon/ui";
 
 import {
-  Collapse,
   Navbar,
-  NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  Container,
   InputGroup,
   InputGroupText,
   InputGroupAddon,
-  Input,
-  FormGroup,
-  Button
+  Input
 } from "reactstrap";
 
 import { web3_eth_getTransactionByHash } from "../../web3Helpers";
@@ -72,7 +62,6 @@ class App extends Component {
               <form>
                 <InputGroup className="no-border">
                   <Input
-                    placeholder
                     type="text"
                     placeholder="Tx, Block or Address"
                     value={this.state.searchValue}

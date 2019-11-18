@@ -25,7 +25,6 @@ import BlockStatsSize from "./BlockStatsSize";
 import BlockStatsTransactions from "./BlockStatsTransactions";
 import BlockMoons from "./BlockMoons";
 import GasUsed from "./GasUsed";
-import GasUnused from "./GasUnused";
 
 import LastBlock from "./LastBlock";
 import LatestBlocks from "./LatestBlocks";
@@ -118,13 +117,13 @@ class Stats extends Component {
     }
     return (
       <div>
-        <PanelHeader size="lg" 
-        content={
-          <div className="chart-area">
-                    <GasUsed data={this.state} />
-                  </div>
-                  
-        }
+        <PanelHeader
+          size="lg"
+          content={
+            <div className="chart-area">
+              <GasUsed data={this.state} />
+            </div>
+          }
         />
 
         <div className="content">
@@ -244,18 +243,11 @@ class Stats extends Component {
         </div>
         <Grid>
           <Row className="show-grid">
-            <Col sm={12} md={12}>
-              <GasUsed data={this.state} />
-            </Col>
-          </Row>
-
-          <Row className="show-grid">
             <Col xs={12} sm={12}>
               <BlockMoons data={this.state} />
               <br />
             </Col>
           </Row>
-
           <Row className="show-grid">
             <Col xs={12} lg={6}>
               <br />
