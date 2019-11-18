@@ -4,7 +4,6 @@ import {
   ResponsiveContainer,
   AreaChart,
   XAxis,
-  Legend,
   Tooltip,
   Area
 } from "recharts";

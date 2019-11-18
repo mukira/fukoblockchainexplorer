@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Line, Bar } from "react-chartjs-2";
 
 import "./style.css";
 // reactstrap components
@@ -252,10 +251,7 @@ class Stats extends Component {
         </div>
         <Grid>
           <Row className="show-grid">
-            <Col xs={6} sm={4}>
-              <DataDash data={this.state} />
-            </Col>
-            <Col sm={4} md={3}>
+            <Col sm={12} md={12}>
               <GasUse data={this.state} />
             </Col>
           </Row>
