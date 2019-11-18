@@ -41,7 +41,9 @@ import DataDash from './DataDash';
 
 import AvgBlockTime from './AvgBlockTime';
 import AvgTxCount from './AvgTxCount';
-import BlockStats from './BlockStats';
+import BlockStatsGas from './BlockStatsGas';
+import BlockStatsSize from './BlockStatsSize';
+import BlockStatsTransactions from './BlockStatsTransactions';
 import BlockMoons from './BlockMoons';
 import GasUse from './GasUse';
 import LastBlock from './LastBlock';
@@ -148,7 +150,7 @@ class Stats extends Component {
             <Col xs={12} md={4}>
               <Card className="card-chart">
                 <CardHeader>
-                  <CardTitle tag="h4">Transactions</CardTitle>
+                  <CardTitle tag="h4">Gas Price</CardTitle>
                   <UncontrolledDropdown>
                     <DropdownToggle
                       className="btn-round btn-outline-default btn-icon"
@@ -156,22 +158,11 @@ class Stats extends Component {
                     >
                       <i className="now-ui-icons loader_gear" />
                     </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>Action</DropdownItem>
-                      <DropdownItem>Another Action</DropdownItem>
-                      <DropdownItem>Something else here</DropdownItem>
-                      <DropdownItem className="text-danger">
-                        Remove data
-                      </DropdownItem>
-                    </DropdownMenu>
                   </UncontrolledDropdown>
                 </CardHeader>
                 <CardBody>
                   <div className="chart-area">
-                    <Line
-                      data={dashboardShippedProductsChart.data}
-                      options={dashboardShippedProductsChart.options}
-                    />
+                  <BlockStatsGas data={this.state} />
                   </div>
                 </CardBody>
                 <CardFooter>
@@ -206,10 +197,7 @@ class Stats extends Component {
                 </CardHeader>
                 <CardBody>
                   <div className="chart-area">
-                    <Line
-                      data={dashboardAllProductsChart.data}
-                      options={dashboardAllProductsChart.options}
-                    />
+                  <BlockStatsSize data={this.state} />
                   </div>
                 </CardBody>
                 <CardFooter>
@@ -223,14 +211,11 @@ class Stats extends Component {
             <Col xs={12} md={4}>
               <Card className="card-chart">
                 <CardHeader>
-                  <CardTitle tag="h4">Gas Price</CardTitle>
+                  <CardTitle tag="h4">Transactions</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <div className="chart-area">
-                    <Bar
-                      data={dashboard24HoursPerformanceChart.data}
-                      options={dashboard24HoursPerformanceChart.options}
-                    />
+                  <BlockStatsTransactions data={this.state} />
                   </div>
                 </CardBody>
                 <CardFooter>
@@ -459,7 +444,7 @@ class Stats extends Component {
         </div>
 
         <div className="panel-header-lg">
-        <BlockStats data={this.state} />
+        <BlockStatsGas data={this.state} />
         </div>
        
         <Grid>
@@ -468,7 +453,7 @@ class Stats extends Component {
               <DataDash data={this.state} />
             </Col>
             <Col xs={6} sm={8}>
-              <BlockStats data={this.state} />
+              <BlockStatsGas data={this.state} />
               <br />
             </Col>
           </Row>

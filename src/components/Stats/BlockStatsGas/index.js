@@ -44,7 +44,7 @@ class BlockStats extends Component {
     chartData.reverse();
 
     return (
-      <div className="BlockStats">
+      <div className="BlockStatsGas">
         <div>
           <ResponsiveContainer width="100%" height={250}>
             <AreaChart
@@ -54,23 +54,9 @@ class BlockStats extends Component {
               margin={{ top: 25, right: 2, left: 2, bottom: 15 }}
             >
               <defs>
-                <linearGradient
-                  id="TransactionsFill"
-                  x1="0"
-                  y1="0"
-                  x2="0"
-                  y2="1"
-                >
-                  <stop offset="5%" stopColor="#2CA8FF" stopOpacity={1} />
-                  <stop offset="95%" stopColor="#FFFFFF" stopOpacity={0} />
-                </linearGradient>
-                <linearGradient id="SizeFill" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#18ce0f" stopOpacity={0.1} />
-                  <stop offset="95%" stopColor="#FFFFFF" stopOpacity={0} />
-                </linearGradient>
-                <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#d4fc79" stopOpacity={0.1} />
-                  <stop offset="95%" stopColor="#96e6a1" stopOpacity={0} />
+                <linearGradient id="GasGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="#ffffff" stopOpacity={0.1} />
+                  <stop offset="95%" stopColor="#f96332" stopOpacity={0} />
                 </linearGradient>
               </defs>
               <XAxis dataKey="height" />
@@ -79,34 +65,7 @@ class BlockStats extends Component {
                 cursor={false}
                 wrapperStyle={{ background: "#303030", border: 0 }}
               />
-              <Legend />
-              <Area
-                animationEasing="ease-out"
-                animationDuration={500}
-                type="monotone"
-                dataKey="transactions"
-                stroke="#80b6f4"
-                strokeWidth={2}
-                yAxisId={1}
-                dot={{ stroke: "#FFFFFF", fill: "#80b6f4" }}
-                activeDot={{ stroke: "#FFFFFF", strokeWidth: 2, r: 4 }}
-                name="Transactions"
-                fill="url(#TransactionsFill)"
-              />
-              <Area
-                type="monotone"
-                animationEasing="ease-in-out"
-                animationDuration={500}
-                dataKey="size"
-                stroke="#18ce0f"
-                strokeWidth={2}
-                yAxisId={2}
-                dot={{ stroke: "#00bc8c", fill: "#00bc8c" }}
-                activeDot={{ stroke: "#00bc8c", strokeWidth: 2, r: 4 }}
-                name="Size"
-                fillOpacity={1}
-                fill="url(#SizeFill)"
-              />
+              <Legend />           
               <Area
                 type="monotone"
                 animationEasing="linear"
@@ -119,7 +78,7 @@ class BlockStats extends Component {
                 activeDot={{ stroke: "#FFFFFF", strokeWidth: 2, r: 4 }}
                 name="Gas Price"
                 fillOpacity={1}
-                fill="url(#colorPv)"
+                fill="url(#GasGradient)"
               />
             </AreaChart>
           </ResponsiveContainer>
