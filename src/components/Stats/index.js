@@ -24,7 +24,9 @@ import BlockStatsGas from "./BlockStatsGas";
 import BlockStatsSize from "./BlockStatsSize";
 import BlockStatsTransactions from "./BlockStatsTransactions";
 import BlockMoons from "./BlockMoons";
-import GasUse from "./GasUse";
+import GasUsed from "./GasUsed";
+import GasUnused from "./GasUnused";
+
 import LastBlock from "./LastBlock";
 import LatestBlocks from "./LatestBlocks";
 import LatestTransactions from "./LatestTransactions";
@@ -116,7 +118,7 @@ class Stats extends Component {
     }
     return (
       <div>
-        <PanelHeader size="lg" content={<GasUse data={this.state} />} />
+        <PanelHeader size="lg" content={<GasUsed data={this.state} />} />
         <div className="content">
           <div class="card-stats card-raised card">
             <div class="card-body">
@@ -235,7 +237,7 @@ class Stats extends Component {
         <Grid>
           <Row className="show-grid">
             <Col sm={12} md={12}>
-              <GasUse data={this.state} />
+              <GasUsed data={this.state} />
             </Col>
           </Row>
 

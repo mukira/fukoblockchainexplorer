@@ -39,6 +39,7 @@ class GasUse extends Component {
 
     return (
       <div className="GasUse">
+        <div className=" border-secondary">
           <Text style={{ textAlign: "center" }}>Gas Usage</Text>
           <div className="card-body">
             <ResponsiveContainer width="100%" height={280}>
@@ -49,17 +50,6 @@ class GasUse extends Component {
                 stackOffset="expand"
                 margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
               >
-               <defs>
-                <linearGradient id="SizeFill" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#18ce0f" stopOpacity={0.1} />
-                  <stop offset="95%" stopColor="#FFFFFF" stopOpacity={0} />
-                </linearGradient>
-                <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#d4fc79" stopOpacity={0.1} />
-                  <stop offset="95%" stopColor="#96e6a1" stopOpacity={0} />
-                </linearGradient>
-              </defs>
-
                 <Tooltip
                   cursor={false}
                   wrapperStyle={{ background: "#FFFFFF", border: 0 }}
@@ -84,7 +74,7 @@ class GasUse extends Component {
                   name="Gas Used"
                   stackId="1"
                   stroke="#96e6a1"
-                  fill="url(#colorPv)"
+                  fill="#E74C3C"
                   
                 />
                 <Area
@@ -101,6 +91,7 @@ class GasUse extends Component {
             </ResponsiveContainer>
           </div>
         </div>
+      </div>
     );
   }
 }
