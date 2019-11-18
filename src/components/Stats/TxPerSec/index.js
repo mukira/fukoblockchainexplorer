@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './style.css'
 import _ from 'lodash'
-import { Text } from '@aragon/ui'
 
 
 class TxPerSec extends Component {
@@ -42,12 +41,9 @@ class TxPerSec extends Component {
     
       return (
           <div className="TxPerSec">
-            <div className="card border-secondary mb-3">
-                <Text style={{textAlign: "center"}}><i className="fas fa-tachometer-alt"/>Tx / Sec</Text>
                 <div className="card-body">
                     <h1 className="card-title" style={{textAlign: "center"}}> {average}</h1>
                 </div>
-            </div>
           </div>
       );
   }

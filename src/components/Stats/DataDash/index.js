@@ -45,9 +45,6 @@ class DataDash extends Component {
     const gasLimit = parseInt(data.blocks[0].gasLimit, 10);
     return (
       <div className="DataDash">
-        <h2>
-          <i className="fas fa-link" /> Stats
-        </h2>
         <div>
           <table>
             <tbody>
