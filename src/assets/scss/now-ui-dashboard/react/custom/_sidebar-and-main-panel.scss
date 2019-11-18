@@ -51,8 +51,11 @@
   padding-top: 80px;
   padding-bottom: 45px;
   position: relative;
-  @include panel-gradient($black-color);
-
+  background: #0D68BF;
+  background: -webkit-linear-gradient(top left, #0D68BF, #6945C3);
+  background: -moz-linear-gradient(top left, #0D68BF, #6945C3);
+  background: linear-gradient(to bottom right, #0D68BF, #6945C3);  
+  
   .header{
     .title{
       color: $white-color;
