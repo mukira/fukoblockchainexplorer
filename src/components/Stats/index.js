@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { Line, Bar } from "react-chartjs-2";
 
-import './style.css';
+import "./style.css";
 // reactstrap components
 import {
   Card,
@@ -22,8 +22,7 @@ import {
   Input,
   UncontrolledTooltip
 } from "reactstrap";
-import { Grid } from 'react-bootstrap';
-
+import { Grid } from "react-bootstrap";
 
 // core components
 import PanelHeader from "./components/PanelHeader/PanelHeader.jsx";
@@ -35,23 +34,21 @@ import {
   dashboard24HoursPerformanceChart
 } from "./variables/charts.jsx";
 
+import DataDash from "./DataDash";
 
-import DataDash from './DataDash';
+import AvgBlockTime from "./AvgBlockTime";
+import AvgTxCount from "./AvgTxCount";
+import BlockStatsGas from "./BlockStatsGas";
+import BlockStatsSize from "./BlockStatsSize";
+import BlockStatsTransactions from "./BlockStatsTransactions";
+import BlockMoons from "./BlockMoons";
+import GasUse from "./GasUse";
+import LastBlock from "./LastBlock";
+import LatestBlocks from "./LatestBlocks";
+import LatestTransactions from "./LatestTransactions";
+import TxPerSec from "./TxPerSec";
 
-
-import AvgBlockTime from './AvgBlockTime';
-import AvgTxCount from './AvgTxCount';
-import BlockStatsGas from './BlockStatsGas';
-import BlockStatsSize from './BlockStatsSize';
-import BlockStatsTransactions from './BlockStatsTransactions';
-import BlockMoons from './BlockMoons';
-import GasUse from './GasUse';
-import LastBlock from './LastBlock';
-import LatestBlocks from './LatestBlocks';
-import LatestTransactions from './LatestTransactions';
-import TxPerSec from './TxPerSec';
-
-import Constants from './../Constants';
+import Constants from "./../Constants";
 
 import {
   web3_eth_getBlockNumber,
@@ -59,9 +56,9 @@ import {
   web3_eth_hashrate,
   web3_eth_gasPrice,
   web3_net_peerCount
-} from '../../web3Helpers';
+} from "../../web3Helpers";
 
-var TimerMixin = require('react-timer-mixin');
+var TimerMixin = require("react-timer-mixin");
 
 class Stats extends Component {
   constructor(props) {
@@ -71,7 +68,7 @@ class Stats extends Component {
       curr_block: null,
       hashrate: null,
       gasPrice: null,
-      peerCount: null,
+      peerCount: null
     };
   }
 
@@ -137,14 +134,63 @@ class Stats extends Component {
     }
     return (
       <div>
-
-     <PanelHeader
-          size="lg"
-          content={
-            <GasUse data={this.state} />
-
-          }
-        />
+        <PanelHeader size="lg" content={<GasUse data={this.state} />} />
+        <div class="row">
+          <div class="col-12 col-md-12">
+            <div class="card-stats card-raised card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="statistics">
+                      <div class="info">
+                        <div class="icon icon-primary">
+                          <i class="now-ui-icons ui-2_chat-round"></i>
+                        </div>
+                        <h3 class="info-title">859</h3>
+                        <h6 class="stats-title">Messages</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="statistics">
+                      <div class="info">
+                        <div class="icon icon-success">
+                          <i class="now-ui-icons business_money-coins"></i>
+                        </div>
+                        <h3 class="info-title">
+                          <small>$</small>3,521
+                        </h3>
+                        <h6 class="stats-title">Today Revenue</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="statistics">
+                      <div class="info">
+                        <div class="icon icon-info">
+                          <i class="now-ui-icons users_single-02"></i>
+                        </div>
+                        <h3 class="info-title">562</h3>
+                        <h6 class="stats-title">Customers</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="statistics">
+                      <div class="info">
+                        <div class="icon icon-danger">
+                          <i class="now-ui-icons objects_support-17"></i>
+                        </div>
+                        <h3 class="info-title">353</h3>
+                        <h6 class="stats-title">Support Requests</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="content">
           <Row>
             <Col xs={12} md={4}>
@@ -162,7 +208,7 @@ class Stats extends Component {
                 </CardHeader>
                 <CardBody>
                   <div className="chart-area">
-                  <BlockStatsGas data={this.state} />
+                    <BlockStatsGas data={this.state} />
                   </div>
                 </CardBody>
                 <CardFooter>
@@ -173,7 +219,7 @@ class Stats extends Component {
                 </CardFooter>
               </Card>
             </Col>
-            
+
             <Col xs={12} md={4}>
               <Card className="card-chart">
                 <CardHeader>
@@ -197,7 +243,7 @@ class Stats extends Component {
                 </CardHeader>
                 <CardBody>
                   <div className="chart-area">
-                  <BlockStatsSize data={this.state} />
+                    <BlockStatsSize data={this.state} />
                   </div>
                 </CardBody>
                 <CardFooter>
@@ -215,7 +261,7 @@ class Stats extends Component {
                 </CardHeader>
                 <CardBody>
                   <div className="chart-area">
-                  <BlockStatsTransactions data={this.state} />
+                    <BlockStatsTransactions data={this.state} />
                   </div>
                 </CardBody>
                 <CardFooter>
@@ -437,16 +483,13 @@ class Stats extends Component {
             </Col>
           </Row>
         </div>
-    );
-  }
-         <div className="panel-header-lg">
-         <GasUse data={this.state} />
-        </div>
-
+        ); }
         <div className="panel-header-lg">
-        <BlockStatsGas data={this.state} />
+          <GasUse data={this.state} />
         </div>
-       
+        <div className="panel-header-lg">
+          <BlockStatsGas data={this.state} />
+        </div>
         <Grid>
           <Row className="show-grid">
             <Col xs={6} sm={4}>
@@ -458,18 +501,17 @@ class Stats extends Component {
             </Col>
           </Row>
 
-
           <Row className="show-grid">
             <Col xs={4} sm={3}>
               <AvgBlockTime data={this.state} />
             </Col>
-            
+
             <Col sm={4} md={3}>
               <LastBlock data={this.state} />
             </Col>
             <Col sm={4} md={3}>
               <AvgTxCount data={this.state} />
-            </Col>            
+            </Col>
             <Col sm={4} md={3}>
               <TxPerSec data={this.state} />
             </Col>

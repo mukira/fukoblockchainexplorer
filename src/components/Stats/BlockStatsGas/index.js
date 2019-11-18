@@ -54,9 +54,15 @@ class BlockStats extends Component {
               margin={{ top: 25, right: 2, left: 2, bottom: 15 }}
             >
               <defs>
-                <linearGradient id="GasGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#ffffff" stopOpacity={0.1} />
-                  <stop offset="95%" stopColor="#f96332" stopOpacity={0} />
+              <linearGradient
+                  id="GasFill"
+                  x1="0"
+                  y1="0"
+                  x2="0"
+                  y2="1"
+                >
+                  <stop offset="5%" stopColor="#2CA8FF" stopOpacity={1} />
+                  <stop offset="95%" stopColor="#FFFFFF" stopOpacity={0} />
                 </linearGradient>
               </defs>
               <XAxis dataKey="height" />
@@ -78,7 +84,7 @@ class BlockStats extends Component {
                 activeDot={{ stroke: "#FFFFFF", strokeWidth: 2, r: 4 }}
                 name="Gas Price"
                 fillOpacity={1}
-                fill="url(#GasGradient)"
+                fill="url(#GasFill)"
               />
             </AreaChart>
           </ResponsiveContainer>
