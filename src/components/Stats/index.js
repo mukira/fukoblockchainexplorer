@@ -26,13 +26,6 @@ import { Grid } from "react-bootstrap";
 // core components
 import PanelHeader from "./components/PanelHeader/PanelHeader.jsx";
 
-import {
-  dashboardPanelChart,
-  dashboardShippedProductsChart,
-  dashboardAllProductsChart,
-  dashboard24HoursPerformanceChart
-} from "./variables/charts.jsx";
-
 import DataDash from "./DataDash";
 
 import AvgBlockTime from "./AvgBlockTime";
