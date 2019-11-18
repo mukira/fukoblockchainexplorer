@@ -118,7 +118,7 @@ class Stats extends Component {
     }
     return (
       <div>
-        <PanelHeader size="lg" content={<GasUsed data={this.state} />} />
+        <PanelHeader size="lg" content={<GasUsed data={this.state}/>} />
         <div className="content">
           <div class="card-stats card-raised card">
             <div class="card-body">

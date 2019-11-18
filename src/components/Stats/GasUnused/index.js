@@ -41,7 +41,7 @@ class GasUse extends Component {
       <div className="GasUse">
         <Text style={{ textAlign: "center" }}>Gas Usage</Text>
         <div className="card-body">
-          <ResponsiveContainer width="100%" height={280}>
+          <ResponsiveContainer width="100%" height={180}>
             <AreaChart
               width={1020}
               height={800}
@@ -50,9 +50,9 @@ class GasUse extends Component {
               margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
             >
               <defs>
-                <linearGradient id="GasFill" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#f96332" stopOpacity={1} />
-                  <stop offset="95%" stopColor="#FFFFFF" stopOpacity={0} />
+                <linearGradient id="GasUnusedFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="rgba(255, 255, 255, 0.14)" stopOpacity={1} />
+                  <stop offset="95%" stopColor="rgba(128, 182, 244, 0)" stopOpacity={0} />
                 </linearGradient>
               </defs>
 
@@ -77,24 +77,14 @@ class GasUse extends Component {
                 animationEasing="linear"
                 animationDuration={500}
                 dataKey="b"
-                stroke="#f96332"
+                stroke="#ffffff"
                 strokeWidth={2}
                 yAxisId={3}
-                dot={{ stroke: "#f96332", fill: "#ffffff" }}
+                dot={{ stroke: "#ffffff", fill: "#2c2c2c", strokeWidth: 2, r: 6}}
                 activeDot={{ stroke: "#FFFFFF", strokeWidth: 2, r: 4 }}
                 name="Gas Used"
                 fillOpacity={1}
-                fill="url(#GasFill)"
-              />
-              <Area
-                type="monotone"
-                animationDuration={500}
-                animationEasing="ease-in-out"
-                dataKey="a"
-                name="Unused Gas Limit"
-                stackId="1"
-                stroke="#ffffff"
-                fill="#2c2c2c"
+                fill="url(#GasUnusedFill)"
               />
             </AreaChart>
           </ResponsiveContainer>
