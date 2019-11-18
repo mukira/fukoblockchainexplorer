@@ -66,7 +66,7 @@ class BlockMoons extends Component {
                 <XAxis type="number" height={20} domain={['auto', 'auto']} dataKey="timestamp" name="Timestamp" tick={{strokeWidth: 1}} tickFormatter={formatXAxis} />
                 <YAxis type="number" dataKey="number" name="Block Number" height={10} width={80} tick={false} tickLine={false} axisLine={false} />
                 <ZAxis type="number" dataKey="transactions" name="Transactions" domain={domain} range={range} />
-                <Tooltip cursor={false} wrapperStyle={{ background: "#303030", border: 0}} itemStyle={{ color: "#00bc8c" }} content={this.renderTooltip} payload={[{ name: '05-01', value: 12, unit: 'kg' }]} itemSorter={(item1, item2) => item1.name.localeCompare(item2.name)}/>
+                <Tooltip cursor={false} wrapperStyle={{ background: "#303030", border: 0}} itemStyle={{ color: "#00bc8c" }} />
                 <Scatter data={chartData} shape="circle" fill='#8884d8' stroke="#222" strokeWidth={1} animationEasing="linear"/>
           </ScatterChart>
         </ResponsiveContainer>
