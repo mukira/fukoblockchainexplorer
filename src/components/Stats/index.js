@@ -477,37 +477,10 @@ class Stats extends Component {
             </Col>
           </Row>
         </div>
-        ); }
-        <div className="panel-header-lg">
-          <GasUse data={this.state} />
-        </div>
-        <div className="panel-header-lg">
-          <BlockStatsGas data={this.state} />
-        </div>
         <Grid>
           <Row className="show-grid">
             <Col xs={6} sm={4}>
               <DataDash data={this.state} />
-            </Col>
-            <Col xs={6} sm={8}>
-              <BlockStatsGas data={this.state} />
-              <br />
-            </Col>
-          </Row>
-
-          <Row className="show-grid">
-            <Col xs={4} sm={3}>
-              <AvgBlockTime data={this.state} />
-            </Col>
-
-            <Col sm={4} md={3}>
-              <LastBlock data={this.state} />
-            </Col>
-            <Col sm={4} md={3}>
-              <AvgTxCount data={this.state} />
-            </Col>
-            <Col sm={4} md={3}>
-              <TxPerSec data={this.state} />
             </Col>
             <Col sm={4} md={3}>
               <GasUse data={this.state} />

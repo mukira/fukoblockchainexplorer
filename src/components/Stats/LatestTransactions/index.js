@@ -3,6 +3,9 @@ import _ from 'lodash';
 import { Link } from 'react-router-dom';
 import './style.css';
 
+// reactstrap components
+import { Table } from "reactstrap";
+
 class LatestTransactions extends Component {
   constructor(props) {
     super(props);
@@ -44,16 +47,17 @@ class LatestTransactions extends Component {
       );
     });
     return (
+               
       <div className="LatestTransactions">
         <h2>Latest Transactions</h2>
-        <table>
-          <thead>
+        <Table responsive>
+          <thead className="text-primary">
             <tr>
               <th>Tx Hash</th>
             </tr>
           </thead>
           <tbody>{tableRows}</tbody>
-        </table>
+        </Table>
       </div>
     );
   }

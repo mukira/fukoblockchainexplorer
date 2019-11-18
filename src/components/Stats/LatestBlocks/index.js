@@ -3,6 +3,9 @@ import _ from 'lodash'
 import { Link } from 'react-router-dom'
 import './style.css'
 
+import { Table } from "reactstrap";
+
+
 class LatestBlocks extends Component {
   
   constructor(props) {
@@ -39,7 +42,7 @@ class LatestBlocks extends Component {
       return (
           <div className="LatestBlocks">
               <h2>Latest Blocks</h2>
-              <table>
+              <Table responsive>
                 <thead><tr>
                   <th><i className="fa fa-cube"/> no.</th>
                   <th>Hash</th>
@@ -47,7 +50,7 @@ class LatestBlocks extends Component {
                 <tbody>
                   {tableRows}
                 </tbody>
-              </table>
+              </Table>
           </div>
       );
   }
