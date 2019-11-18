@@ -208,8 +208,7 @@ class Stats extends Component {
                 </CardBody>
                 <CardFooter>
                   <div className="stats">
-                  <DataDash data={this.state} />
-
+                    <DataDash data={this.state} />
                   </div>
                 </CardFooter>
               </Card>
@@ -227,8 +226,7 @@ class Stats extends Component {
                 </CardBody>
                 <CardFooter>
                   <div className="stats">
-                  <DataDash data={this.state} />
-
+                    <DataDash data={this.state} />
                   </div>
                 </CardFooter>
               </Card>
@@ -245,7 +243,7 @@ class Stats extends Component {
                 </CardBody>
                 <CardFooter>
                   <div className="stats">
-                  <DataDash data={this.state} />
+                    <DataDash data={this.state} />
                   </div>
                 </CardFooter>
               </Card>

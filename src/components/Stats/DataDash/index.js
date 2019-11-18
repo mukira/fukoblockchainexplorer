@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './style.css';
+import React, { Component } from "react";
+import "./style.css";
 
 class DataDash extends Component {
   constructor(props) {
@@ -33,12 +33,10 @@ class DataDash extends Component {
     if (!this.state.data || !this.state.data.blocks.length) {
       return;
     }
-    
+
     let data = this.state.data;
 
-    console.log(data)
-
-
+    console.log(data);
 
     const difficulty = parseInt(data.blocks[0].difficulty, 10);
     const gasPrice = parseInt(data.gasPrice, 10);
