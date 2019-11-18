@@ -61,7 +61,7 @@ class BlockStats extends Component {
                   x2="0"
                   y2="1"
                 >
-                  <stop offset="5%" stopColor="#2CA8FF" stopOpacity={1} />
+                  <stop offset="5%" stopColor="#f96332" stopOpacity={1} />
                   <stop offset="95%" stopColor="#FFFFFF" stopOpacity={0} />
                 </linearGradient>
               </defs>
@@ -77,10 +77,10 @@ class BlockStats extends Component {
                 animationEasing="linear"
                 animationDuration={500}
                 dataKey="gasPrice"
-                stroke="#96e6a1"
+                stroke="#f96332"
                 strokeWidth={2}
                 yAxisId={3}
-                dot={{ stroke: "#FFFFFF", fill: "#2c2c2c" }}
+               // dot={{ stroke: "#f96332", fill: "#f96332" }}
                 activeDot={{ stroke: "#FFFFFF", strokeWidth: 2, r: 4 }}
                 name="Gas Price"
                 fillOpacity={1}

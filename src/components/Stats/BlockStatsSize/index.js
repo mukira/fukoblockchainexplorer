@@ -55,7 +55,7 @@ class BlockStats extends Component {
             >
               <defs>
                 <linearGradient id="SizeFill" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#18ce0f" stopOpacity={0.1} />
+                  <stop offset="5%" stopColor="#18ce0f" stopOpacity={1} />
                   <stop offset="95%" stopColor="#FFFFFF" stopOpacity={0} />
                 </linearGradient>
               </defs>
@@ -74,8 +74,8 @@ class BlockStats extends Component {
                 stroke="#18ce0f"
                 strokeWidth={2}
                 yAxisId={2}
-                dot={{ stroke: "#00bc8c", fill: "#00bc8c" }}
-                activeDot={{ stroke: "#00bc8c", strokeWidth: 2, r: 4 }}
+                //dot={{ stroke: "#00bc8c", fill: "#00bc8c" }}
+                activeDot={{ stroke: "#FFFFFF", strokeWidth: 2, r: 4 }}
                 name="Size"
                 fillOpacity={1}
                 fill="url(#SizeFill)"
