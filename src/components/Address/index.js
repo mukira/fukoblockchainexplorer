@@ -1,10 +1,15 @@
-import React, { Component } from 'react';
-import './style.css';
-import { Table } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import _ from 'lodash';
+import React, { Component } from "react";
+import "./style.css";
+import { Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import _ from "lodash";
+import { IconFundraising } from "@aragon/ui";
 
-import { web3, web3_eth_getBalance, web3_eth_getTransactionCount } from '../../web3Helpers';
+import {
+  web3,
+  web3_eth_getBalance,
+  web3_eth_getTransactionCount
+} from "../../web3Helpers";
 class Address extends Component {
   constructor(props) {
     super(props);
@@ -45,7 +50,7 @@ class Address extends Component {
       .filter({
         address: address,
         fromBlock: 1,
-        toBlock: 'latest'
+        toBlock: "latest"
       })
       .get(function(err, result) {
         template.setState({
@@ -84,17 +89,18 @@ class Address extends Component {
       );
     });
     return (
-      <div className="Address container">
+      <div className="AddressContainer">
         <br />
         <h2>
-          <i className="fas fa-key" /> Address Info
+          <IconFundraising width="54px" height="54px" color="#ffffff" />
+          Address Info
         </h2>
         <div>
           <table>
             <tbody>
               <tr>
                 <td className="tdLabel">Address: </td>
-                <td className='eth-address'>{address.address}</td>
+                <td className="eth-address">{address.address}</td>
               </tr>
               <tr>
                 <td className="tdLabel">Balance: </td>

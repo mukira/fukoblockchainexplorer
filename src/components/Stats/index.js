@@ -12,7 +12,12 @@ import {
   Col
 } from "reactstrap";
 import { Grid } from "react-bootstrap";
-import { IconApps,IconPermissions,IconCheck,IconFundraising } from '@aragon/ui'
+import {
+  IconApps,
+  IconPermissions,
+  IconCheck,
+  IconFundraising
+} from "@aragon/ui";
 
 // core components
 import PanelHeader from "./components/PanelHeader/PanelHeader.jsx";
@@ -135,7 +140,7 @@ class Stats extends Component {
                   <div class="statistics">
                     <div class="info">
                       <div class="icon">
-                      <IconApps width="54px" height="54px" color="#f96332"/>
+                        <IconApps width="54px" height="54px" color="#f96332" />
                       </div>
                       <h5 class="info-title">
                         <AvgBlockTime data={this.state} />
@@ -148,8 +153,7 @@ class Stats extends Component {
                   <div class="statistics">
                     <div class="info">
                       <div class="icon">
-                      <IconCheck width="54px" height="54px" />
-
+                        <IconCheck width="54px" height="54px" />
                       </div>
                       <h5 class="info-title">
                         <LastBlock data={this.state} />
@@ -162,7 +166,11 @@ class Stats extends Component {
                   <div class="statistics">
                     <div class="info">
                       <div class="icon">
-                      <IconFundraising width="54px" height="54px" color="#2ca8ff"/>
+                        <IconFundraising
+                          width="54px"
+                          height="54px"
+                          color="#2ca8ff"
+                        />
                       </div>
                       <h5 class="info-title">
                         <AvgTxCount data={this.state} />
@@ -175,7 +183,11 @@ class Stats extends Component {
                   <div class="statistics">
                     <div class="info">
                       <div class="icon">
-                      <IconPermissions width="54px" height="54px" color="#ff3636"/>
+                        <IconPermissions
+                          width="54px"
+                          height="54px"
+                          color="#ff3636"
+                        />
                       </div>
                       <h5 class="info-title">
                         <TxPerSec data={this.state} />
@@ -253,7 +265,7 @@ class Stats extends Component {
               <br />
               <LatestBlocks data={this.state} />
             </Col>
-          </Row>          
+          </Row>
           <Row className="show-grid">
             <Col xs={12} sm={12}>
               <BlockMoons data={this.state} />

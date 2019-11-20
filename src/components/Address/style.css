@@ -1,0 +1,27 @@
+.AddressContainer {
+  word-break: break-all;
+  padding-top: 82px;
+  padding-left: 20px;
+}
+.AddressContainerText {
+  word-break: break-all;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.AddressContainer .tdLabel {
+  min-width: 120px;
+}
+body {
+  background: #8360c3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2ebf91,
+    #8360c3
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2ebf91,
+    #8360c3
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

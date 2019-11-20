@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
-import './style.css';
-import { Link } from 'react-router-dom';
-import TransactionList from './TransactionList';
+import React, { Component } from "react";
+import "./style.css";
+import { Link } from "react-router-dom";
+import TransactionList from "./TransactionList";
 
-import moment from 'moment';
+import moment from "moment";
 
-import { web3_eth_getBlock } from '../../web3Helpers';
+import { web3_eth_getBlock } from "../../web3Helpers";
+import { IconApps } from "@aragon/ui";
 
 class Block extends Component {
   constructor(props) {
@@ -54,12 +55,12 @@ class Block extends Component {
     const difficultyTotal = parseInt(block.totalDifficulty, 10);
 
     return (
-      <div className="Block container">
+      <div className="Blockcontainer">
         <br />
         <h2>
-          <i className="fa fa-cube" /> Block Info
+          <IconApps width="54px" height="54px" color="#ffffff" /> Block Info
         </h2>
-        <div>
+        <div className="BlockcontainerText">
           <table>
             <tbody>
               <tr>

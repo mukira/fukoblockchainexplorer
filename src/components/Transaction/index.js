@@ -64,7 +64,7 @@ class Transaction extends Component {
         <CardTitle tag="h2"><IconPermissions width="54px" height="54px" color="#2ca8ff"/>
  Transaction Info</CardTitle> 
         <div className="table-full-width table-responsive">
-          <Table>
+          <Table responsive>
             <tbody>
               <tr>
                 <td className="text-left">Tx Hash: </td>
