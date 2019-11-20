@@ -7,6 +7,11 @@ import {
   web3_eth_getTransactionReceipt
 } from '../../web3Helpers';
 
+// reactstrap components
+import { CardTitle,Col,Card,Table } from "reactstrap";
+import { IconPermissions } from '@aragon/ui'
+
+
 class Transaction extends Component {
   constructor(props) {
     super(props);
@@ -51,68 +56,74 @@ class Transaction extends Component {
     const value = parseInt(tx.value, 10) / 1000000000000000000;
     //    const difficultyTotal = parseInt(block.totalDifficulty, 10);
     return (
-      <div className="Transaction container">
+      <div className="Transaction">
+      <Col xs={12} md={12}>
+        
+              <Card className="card-tasks">
         <br />
-        <h2>
-          <i className="far fa-file-code" /> Transaction Info
-        </h2>
-        <div>
-          <table>
+        <CardTitle tag="h2"><IconPermissions width="54px" height="54px" color="#2ca8ff"/>
+ Transaction Info</CardTitle> 
+        <div className="table-full-width table-responsive">
+          <Table>
             <tbody>
               <tr>
-                <td className="tdLabel">Tx Hash: </td>
+                <td className="text-left">Tx Hash: </td>
                 <td>{tx.hash}</td>
               </tr>
               <tr>
-                <td className="tdLabel">Tx Status: </td>
+                <td className="text-left">Tx Status: </td>
                 <td>{tx.status}</td>
               </tr>
               <tr>
-                <td className="tdLabel">Block Hash: </td>
+                <td className="text-left">Block Hash: </td>
                 <td>
                   <Link to={`../block/${tx.blockHash}`}>{tx.blockHash}</Link>
                 </td>
               </tr>
               <tr>
-                <td className="tdLabel">Block Number: </td>
+                <td className="text-left">Block Number: </td>
                 <td>{tx.blockNumber}</td>
               </tr>
               <tr>
-                <td className="tdLabel">From: </td>
+                <td className="text-left">From: </td>
                 <td>
                   <Link to={`../address/${tx.from}`}>{tx.from}</Link>
                 </td>
               </tr>
               <tr>
-                <td className="tdLabel">To: </td>
+                <td className="text-left">To: </td>
                 <td>
                   <Link to={`../address/${tx.to}`}>{tx.to}</Link>
                 </td>
               </tr>
               <tr>
-                <td className="tdLabel">Value: </td>
+                <td className="text-left">Value: </td>
                 <td>{value}</td>
               </tr>
               <tr>
-                <td className="tdLabel">Gas: </td>
+                <td className="text-left">Gas: </td>
                 <td>{tx.gas}</td>
               </tr>
               <tr>
-                <td className="tdLabel">Gas Price: </td>
+                <td className="text-left">Gas Price: </td>
                 <td>{tx.gasPrice.c[0]}</td>
               </tr>
               <tr>
-                <td className="tdLabel">Input: </td>
+                <td className="text-left">Input: </td>
                 <td>{tx.input}</td>
               </tr>
               <tr>
-                <td className="tdLabel">Nonce: </td>
+                <td className="text-left">Nonce: </td>
                 <td>{tx.nonce}</td>
               </tr>
             </tbody>
-          </table>
+          </Table>
         </div>
-      </div>
+
+        </Card>
+
+      </Col>
+</div>
     );
   }
 }

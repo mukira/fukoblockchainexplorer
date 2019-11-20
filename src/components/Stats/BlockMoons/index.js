@@ -75,13 +75,13 @@ class BlockMoons extends Component {
               <defs>
                 <linearGradient id="BlockMoonsFill" x1="0" y1="0" x2="0" y2="1">
                   <stop
-                    offset="5%"
-                    stopColor="#051937"
+                    offset="0%"
+                    stopColor="#6a11cb"
                     stopOpacity={1}
                   />
                   <stop
-                    offset="95%"
-                    stopColor="#845EC2"
+                    offset="100%"
+                    stopColor="#2575fc"
                     stopOpacity={1}
                   />
                 </linearGradient>

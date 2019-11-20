@@ -6,6 +6,7 @@ import "./style.css";
 // reactstrap components
 import { Table } from "reactstrap";
 
+
 class LatestTransactions extends Component {
   constructor(props) {
     super(props);

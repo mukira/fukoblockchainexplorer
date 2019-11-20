@@ -245,12 +245,6 @@ class Stats extends Component {
         </div>
         <Grid>
           <Row className="show-grid">
-            <Col xs={12} sm={12}>
-              <BlockMoons data={this.state} />
-              <br />
-            </Col>
-          </Row>
-          <Row className="show-grid">
             <Col xs={12} lg={6}>
               <br />
               <LatestTransactions data={this.state} />
@@ -258,6 +252,12 @@ class Stats extends Component {
             <Col xs={12} lg={6}>
               <br />
               <LatestBlocks data={this.state} />
+            </Col>
+          </Row>          
+          <Row className="show-grid">
+            <Col xs={12} sm={12}>
+              <BlockMoons data={this.state} />
+              <br />
             </Col>
           </Row>
         </Grid>
