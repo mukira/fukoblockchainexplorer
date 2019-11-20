@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./style.css";
 import _ from "lodash";
-import { Text } from "@aragon/ui";
 
 import { ResponsiveContainer, AreaChart, Area, Tooltip, XAxis } from "recharts";
 
@@ -39,15 +38,13 @@ class GasUse extends Component {
 
     return (
       <div className="GasUse">
-        <Text style={{ textAlign: "center" }}>Gas Usage</Text>
-        <div className="card-body">
-          <ResponsiveContainer width="100%" height={190}>
+          <ResponsiveContainer width="100%" height={140}>
             <AreaChart
               width={1020}
               height={800}
               data={chartData}
               stackOffset="expand"
-              margin={{ top: 10, right: 0, left: 0, bottom: 10 }}
+              margin={{ top: 30, right: 0, left: 0, bottom: 10 }}
             >
               <defs>
                 <linearGradient id="GasUsedFill" x1="0" y1="0" x2="0" y2="1">
@@ -59,7 +56,7 @@ class GasUse extends Component {
                   <stop
                     offset="95%"
                     stopColor="rgba(128, 182, 244, 0)"
-                    stopOpacity={0}
+                    stopOpacity={.6}
                   />
                 </linearGradient>
               </defs>
@@ -67,7 +64,9 @@ class GasUse extends Component {
               <Tooltip
                 cursor={false}
                 wrapperStyle={{ background: "#FFFFFF", border: 0 }}
-                coordinate={{ x: 100, y: 140 }}
+                labelStyle={{ color: "#000"}}
+                itemStyle={{ color: "#000"}}
+                coordinate={{ x: 100, y: 100 }}
                 offset={50}
               />
               <XAxis
@@ -90,15 +89,15 @@ class GasUse extends Component {
                 yAxisId={3}
                 dot={{
                   stroke: "#ffffff",
-                  fill: "#2c2c2c",
+                  fill: "#ffffff",
                   strokeWidth: 2,
                   r: 5
                 }}
                 activeDot={{
-                  stroke: "#2c2c2c",
+                  stroke: "#FFFFFF",
                   fill: "#FFFFFF",
                   strokeWidth: 2,
-                  r: 5
+                  r: 6
                 }}
                 name="Gas Used"
                 fillOpacity={1}
@@ -107,7 +106,6 @@ class GasUse extends Component {
             </AreaChart>
           </ResponsiveContainer>
         </div>
-      </div>
     );
   }
 }

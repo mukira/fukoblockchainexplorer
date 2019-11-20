@@ -72,7 +72,7 @@ class BlockStats extends Component {
                 stroke="#18ce0f"
                 strokeWidth={2}
                 yAxisId={2}
-                //dot={{ stroke: "#00bc8c", fill: "#00bc8c" }}
+                dot={{ stroke: "#00bc8c", fill: "#ffffff" }}
                 activeDot={{ stroke: "#FFFFFF", strokeWidth: 2, r: 4 }}
                 name="Size"
                 fillOpacity={1}

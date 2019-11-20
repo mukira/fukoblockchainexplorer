@@ -72,7 +72,7 @@ class BlockStats extends Component {
                 stroke="#f96332"
                 strokeWidth={2}
                 yAxisId={3}
-                // dot={{ stroke: "#f96332", fill: "#f96332" }}
+                dot={{ stroke: "#f96332", fill: "#ffffff" }}
                 activeDot={{ stroke: "#FFFFFF", strokeWidth: 2, r: 4 }}
                 name="Gas Price"
                 fillOpacity={1}

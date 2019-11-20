@@ -79,7 +79,7 @@ class BlockStats extends Component {
                 stroke="#80b6f4"
                 strokeWidth={2}
                 yAxisId={1}
-                //dot={{ stroke: "#FFFFFF", fill: "#80b6f4" }}
+                dot={{ stroke: "#FFFFFF", fill: "#ffffff" }}
                 activeDot={{ stroke: "#FFFFFF", strokeWidth: 2, r: 4 }}
                 name="Transactions"
                 fill="url(#TransactionsFill)"
