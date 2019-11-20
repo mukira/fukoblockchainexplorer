@@ -13,7 +13,7 @@ a{
     color: $link-disabled-color;
     &:hover,
     &:focus{
-        color: $primary-color;
+        color: $link-newdisabled-color;
     }
 }
 h1, .h1 {
