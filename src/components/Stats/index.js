@@ -12,6 +12,7 @@ import {
   Col
 } from "reactstrap";
 import { Grid } from "react-bootstrap";
+import { IconApps,IconPermissions,IconCheck,IconFundraising } from '@aragon/ui'
 
 // core components
 import PanelHeader from "./components/PanelHeader/PanelHeader.jsx";
@@ -133,8 +134,8 @@ class Stats extends Component {
                 <div class="col-md-3">
                   <div class="statistics">
                     <div class="info">
-                      <div class="icon icon-primary">
-                        <i class="now-ui-icons ui-2_chat-round"></i>
+                      <div class="icon">
+                      <IconApps  color="#f96332"/>
                       </div>
                       <h5 class="info-title">
                         <AvgBlockTime data={this.state} />
@@ -146,8 +147,9 @@ class Stats extends Component {
                 <div class="col-md-3">
                   <div class="statistics">
                     <div class="info">
-                      <div class="icon icon-success">
-                        <i class="now-ui-icons business_money-coins"></i>
+                      <div class="icon">
+                      <IconCheck />
+
                       </div>
                       <h5 class="info-title">
                         <LastBlock data={this.state} />
@@ -159,8 +161,8 @@ class Stats extends Component {
                 <div class="col-md-3">
                   <div class="statistics">
                     <div class="info">
-                      <div class="icon icon-info">
-                        <i class="now-ui-icons users_single-02"></i>
+                      <div class="icon">
+                      <IconFundraising color="#2ca8ff"/>
                       </div>
                       <h5 class="info-title">
                         <AvgTxCount data={this.state} />
@@ -172,8 +174,8 @@ class Stats extends Component {
                 <div class="col-md-3">
                   <div class="statistics">
                     <div class="info">
-                      <div class="icon icon-danger">
-                        <i class="now-ui-icons objects_support-17"></i>
+                      <div class="icon">
+                      <IconPermissions color="#ff3636"/>
                       </div>
                       <h5 class="info-title">
                         <TxPerSec data={this.state} />
