@@ -38,6 +38,7 @@ class GasUse extends Component {
 
     return (
       <div className="GasUse">
+                <h2 style={{ textAlign: "center", color: "#ffffff" }}>Gas Usage</h2>
           <ResponsiveContainer width="100%" height={140}>
             <AreaChart
               width={1020}
