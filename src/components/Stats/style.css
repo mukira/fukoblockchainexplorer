@@ -1,0 +1,10 @@
+.card-stats .statistics {
+    position: relative;
+    text-align: center;
+    padding: 15px 0;
+};
+.card-stats .icon {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+};

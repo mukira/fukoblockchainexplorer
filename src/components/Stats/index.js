@@ -135,7 +135,7 @@ class Stats extends Component {
                   <div class="statistics">
                     <div class="info">
                       <div class="icon">
-                      <IconApps  color="#f96332"/>
+                      <IconApps width="54px" height="54px" color="#f96332"/>
                       </div>
                       <h5 class="info-title">
                         <AvgBlockTime data={this.state} />
@@ -148,7 +148,7 @@ class Stats extends Component {
                   <div class="statistics">
                     <div class="info">
                       <div class="icon">
-                      <IconCheck />
+                      <IconCheck width="54px" height="54px" />
 
                       </div>
                       <h5 class="info-title">
@@ -162,7 +162,7 @@ class Stats extends Component {
                   <div class="statistics">
                     <div class="info">
                       <div class="icon">
-                      <IconFundraising color="#2ca8ff"/>
+                      <IconFundraising width="54px" height="54px" color="#2ca8ff"/>
                       </div>
                       <h5 class="info-title">
                         <AvgTxCount data={this.state} />
@@ -175,7 +175,7 @@ class Stats extends Component {
                   <div class="statistics">
                     <div class="info">
                       <div class="icon">
-                      <IconPermissions color="#ff3636"/>
+                      <IconPermissions width="54px" height="54px" color="#ff3636"/>
                       </div>
                       <h5 class="info-title">
                         <TxPerSec data={this.state} />
