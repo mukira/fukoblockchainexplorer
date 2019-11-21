@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
-import './style.css';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import "./style.css";
+import { Link } from "react-router-dom";
 
 import {
   web3_eth_getTransactionByHash,
   web3_eth_getTransactionReceipt
-} from '../../web3Helpers';
+} from "../../web3Helpers";
 
 // reactstrap components
-import { CardTitle,Col,Card,Table } from "reactstrap";
-import { IconPermissions } from '@aragon/ui'
-
+import { CardTitle, Col, Card, Table } from "reactstrap";
+import { IconPermissions } from "@aragon/ui";
 
 class Transaction extends Component {
   constructor(props) {
@@ -38,8 +37,8 @@ class Transaction extends Component {
     // Use web3 to get the Block object
     var currTxObj = await web3_eth_getTransactionByHash(tx_hash);
     currTxObj.currTxReceipt = await web3_eth_getTransactionReceipt(tx_hash);
-    if (currTxObj.currTxReceipt.status === '0x1') currTxObj.status = 'Success';
-    else currTxObj.status = 'Fail';
+    if (currTxObj.currTxReceipt.status === "0x1") currTxObj.status = "Success";
+    else currTxObj.status = "Fail";
 
     // Set the Component state
     this.setState({
@@ -51,79 +50,93 @@ class Transaction extends Component {
     const tx = this.state.tx;
 
     if (!tx) {
-      return <pre>loading...</pre>;
+      return (
+        <div class="loaderdiv">
+          <div class="loader">
+            <span class="box"></span>
+            <span class="box"></span>
+            <div class="code">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/iyf-camp-thika.appspot.com/o/fukoblockchainexplorer%2FIllustration09.png?alt=media&token=dfa64fe0-0026-43e5-9639-599cfa4344ac"
+                width="120px"
+              />
+            </div>
+            <span class="txt">Fuko Blockchain Explorer</span>
+          </div>
+        </div>);
     }
     const value = parseInt(tx.value, 10) / 1000000000000000000;
     //    const difficultyTotal = parseInt(block.totalDifficulty, 10);
     return (
       <div className="Transaction">
-      <Col xs={12} md={12}>
-        
-              <Card className="card-tasks">
-        <br />
-        <CardTitle tag="h2"><IconPermissions width="54px" height="54px" color="#2ca8ff"/>
- Transaction Info</CardTitle> 
-        <div className="table-full-width table-responsive">
-          <Table responsive>
-            <tbody>
-              <tr>
-                <td className="text-left">Tx Hash: </td>
-                <td>{tx.hash}</td>
-              </tr>
-              <tr>
-                <td className="text-left">Tx Status: </td>
-                <td>{tx.status}</td>
-              </tr>
-              <tr>
-                <td className="text-left">Block Hash: </td>
-                <td>
-                  <Link to={`../block/${tx.blockHash}`}>{tx.blockHash}</Link>
-                </td>
-              </tr>
-              <tr>
-                <td className="text-left">Block Number: </td>
-                <td>{tx.blockNumber}</td>
-              </tr>
-              <tr>
-                <td className="text-left">From: </td>
-                <td>
-                  <Link to={`../address/${tx.from}`}>{tx.from}</Link>
-                </td>
-              </tr>
-              <tr>
-                <td className="text-left">To: </td>
-                <td>
-                  <Link to={`../address/${tx.to}`}>{tx.to}</Link>
-                </td>
-              </tr>
-              <tr>
-                <td className="text-left">Value: </td>
-                <td>{value}</td>
-              </tr>
-              <tr>
-                <td className="text-left">Gas: </td>
-                <td>{tx.gas}</td>
-              </tr>
-              <tr>
-                <td className="text-left">Gas Price: </td>
-                <td>{tx.gasPrice.c[0]}</td>
-              </tr>
-              <tr>
-                <td className="text-left">Input: </td>
-                <td>{tx.input}</td>
-              </tr>
-              <tr>
-                <td className="text-left">Nonce: </td>
-                <td>{tx.nonce}</td>
-              </tr>
-            </tbody>
-          </Table>
-        </div>
-
-        </Card>
-
-      </Col>
-</div>
+        <Col xs={12} md={12}>
+          <Card className="card-tasks">
+            <br />
+            <CardTitle tag="h2">
+              <IconPermissions width="54px" height="54px" color="#2ca8ff" />
+              Transaction Info
+            </CardTitle>
+            <div className="table-full-width table-responsive">
+              <Table responsive>
+                <tbody>
+                  <tr>
+                    <td className="text-left">Tx Hash: </td>
+                    <td>{tx.hash}</td>
+                  </tr>
+                  <tr>
+                    <td className="text-left">Tx Status: </td>
+                    <td>{tx.status}</td>
+                  </tr>
+                  <tr>
+                    <td className="text-left">Block Hash: </td>
+                    <td>
+                      <Link to={`../block/${tx.blockHash}`}>
+                        {tx.blockHash}
+                      </Link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="text-left">Block Number: </td>
+                    <td>{tx.blockNumber}</td>
+                  </tr>
+                  <tr>
+                    <td className="text-left">From: </td>
+                    <td>
+                      <Link to={`../address/${tx.from}`}>{tx.from}</Link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="text-left">To: </td>
+                    <td>
+                      <Link to={`../address/${tx.to}`}>{tx.to}</Link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="text-left">Value: </td>
+                    <td>{value}</td>
+                  </tr>
+                  <tr>
+                    <td className="text-left">Gas: </td>
+                    <td>{tx.gas}</td>
+                  </tr>
+                  <tr>
+                    <td className="text-left">Gas Price: </td>
+                    <td>{tx.gasPrice.c[0]}</td>
+                  </tr>
+                  <tr>
+                    <td className="text-left">Input: </td>
+                    <td>{tx.input}</td>
+                  </tr>
+                  <tr>
+                    <td className="text-left">Nonce: </td>
+                    <td>{tx.nonce}</td>
+                  </tr>
+                </tbody>
+              </Table>
+            </div>
+          </Card>
+        </Col>
+      </div>
     );
   }
 }

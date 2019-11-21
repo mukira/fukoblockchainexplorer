@@ -119,14 +119,21 @@ class Stats extends Component {
 
   render() {
     if (!this.state || !this.state.blocks.length) {
-      return <div class="loaderdiv"><div class="loader">   
-      <span class="box"></span>   
-      <span class="box"></span>  
-      <div class="code"> 
-      <img src="https://img1.picload.org/image/dllawagr/code.png" width="120px" />
-      </div>    
-      <span class="txt">LOADING CODE...</span>
-      </div></div>;
+      return (
+        <div class="loaderdiv">
+          <div class="loader">
+            <span class="box"></span>
+            <span class="box"></span>
+            <div class="code">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/iyf-camp-thika.appspot.com/o/fukoblockchainexplorer%2FIllustration09.png?alt=media&token=dfa64fe0-0026-43e5-9639-599cfa4344ac"
+                width="120px"
+              />
+            </div>
+            <span class="txt">Fuko Blockchain Explorer</span>
+          </div>
+        </div>
+      );
     }
     return (
       <div>

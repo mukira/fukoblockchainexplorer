@@ -48,7 +48,21 @@ class Block extends Component {
   render() {
     const block = this.state.block;
     if (!block.difficulty) {
-      return <pre>loading...</pre>;
+      return  (
+        <div class="loaderdiv">
+          <div class="loader">
+            <span class="box"></span>
+            <span class="box"></span>
+            <div class="code">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/iyf-camp-thika.appspot.com/o/fukoblockchainexplorer%2FIllustration09.png?alt=media&token=dfa64fe0-0026-43e5-9639-599cfa4344ac"
+                width="120px"
+              />
+            </div>
+            <span class="txt">Fuko Blockchain Explorer</span>
+          </div>
+        </div>
+      );
     }
 
     const difficulty = parseInt(block.difficulty.toNumber(), 10);

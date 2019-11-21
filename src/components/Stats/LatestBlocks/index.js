@@ -46,7 +46,7 @@ class LatestBlocks extends Component {
       <div className="LatestBlocks">
         <h2>Latest Blocks</h2>
         <Table responsive>
-        <thead className="text-primary">
+          <thead className="text-primary">
             <tr>
               <th>no.</th>
               <th>Hash</th>

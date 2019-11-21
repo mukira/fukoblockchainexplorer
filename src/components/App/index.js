@@ -56,7 +56,7 @@ class App extends Component {
       <div className="App">
         <Navbar className="navbar-absolute fixed-top navbar-transparent  navbar navbar-expand-lg bg-transparent">
           <div className="logo">
-            <a href="/" className="simple-text logo-mini">
+            <a href="/" >
               <div className="logo-img">
                 <img src={logo} alt="react-logo" />
               </div>
