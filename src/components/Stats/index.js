@@ -119,7 +119,14 @@ class Stats extends Component {
 
   render() {
     if (!this.state || !this.state.blocks.length) {
-      return <pre> loading...</pre>;
+      return <div class="loaderdiv"><div class="loader">   
+      <span class="box"></span>   
+      <span class="box"></span>  
+      <div class="code"> 
+      <img src="https://img1.picload.org/image/dllawagr/code.png" width="120px" />
+      </div>    
+      <span class="txt">LOADING CODE...</span>
+      </div></div>;
     }
     return (
       <div>
