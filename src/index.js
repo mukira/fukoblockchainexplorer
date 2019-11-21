@@ -5,7 +5,6 @@ import App from './components/App';
 import "bootstrap/dist/css/bootstrap.css";
 import "./assets/scss/now-ui-dashboard.scss?v1.2.0";
 import "./assets/css/demo.css";
-import "./assets/fonts/Africa.ttf"
 
 import registerServiceWorker from './registerServiceWorker';
 ReactDOM.render(<App />, document.getElementById('root'));
