@@ -20,8 +20,6 @@ import {
 
 import logo from "./logo.png";
 
-
-
 import { web3_eth_getTransactionByHash } from "../../web3Helpers";
 class App extends Component {
   constructor(props) {
@@ -57,23 +55,16 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar className="navbar-absolute fixed-top navbar-transparent  navbar navbar-expand-lg bg-transparent">
-                 <div className="logo">
-          <a
-            href="/"
-            className="simple-text logo-mini"
-          >
-            <div className="logo-img">
-              <img src={logo} alt="react-logo" />
-            </div>
-          </a>
-          <a
-            href="/"
-            className="simple-text logo-normal"
-            target="_blank"
-          >
-            Creative Tim
-          </a>
-        </div>
+          <div className="logo">
+            <a href="/" className="simple-text logo-mini">
+              <div className="logo-img">
+                <img src={logo} alt="react-logo" />
+              </div>
+            </a>
+            <a href="/" className="simple-text logo-normal">
+              Fuko Blockchain Explorer
+            </a>
+          </div>
 
           <Nav className="justify-content-end collapse navbar-collapse">
             <NavItem>
