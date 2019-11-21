@@ -1,4 +1,18 @@
-Fuko means a mole in Swahili 
+# Fuko blockchain Explorer
+
+![GitHub Logo](https://firebasestorage.googleapis.com/v0/b/iyf-camp-thika.appspot.com/o/fukoblockchainexplorer%2Flogo.png?alt=media&token=001a7664-0dce-451f-b7bf-8b9dc08c3ba5)
+
+### Fuko means a mole in Swahili 
+
+The app logo is inspired by an African mask design of Ashanti goddess, a diety who was supposed to have unrivaled understanding and knowledge of all gods read more on african arts at https://en.wikipedia.org/wiki/African_art and https://en.wikipedia.org/wiki/Ashanti_people
+
+to install and run
+
+### `npm i && npm start`
+
+incase of errors run 
+
+### `rm -rf node_modules && rm ./package-lock.json && npm i && npm start`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
