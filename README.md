@@ -4,7 +4,7 @@
 
 ### Fuko means a mole in Swahili 
 
-The app logo is inspired by an African mask design of Ashanti goddess, a diety who was supposed to have unrivaled understanding and knowledge of all gods read more on african arts at https://en.wikipedia.org/wiki/African_art and https://en.wikipedia.org/wiki/Ashanti_people
+The app logo is inspired by an African mask design of Ashanti goddess, a diety who was supposed to have unrivaled understanding and knowledge of the world and the underworld, read more on african arts at https://en.wikipedia.org/wiki/African_art and https://en.wikipedia.org/wiki/Ashanti_people
 
 to install and run
 
