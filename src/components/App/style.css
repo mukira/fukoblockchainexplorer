@@ -1,0 +1,15 @@
+.logoFont {
+    text-transform: uppercase;
+    font-size: 0.8571em;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    line-height: 1.625rem;
+}
+	
+@font-face {
+   font-family: 'Africa';
+   font-style: normal;
+   font-weight: 400;
+   src: url('../../assets/fonts/Africa.ttf');
+   src: url('../../assets/fonts/Africa.ttf') format('truetype'),
+}
