@@ -1,51 +1,50 @@
-import React, { Component } from 'react'
-import './style.css'
-import _ from 'lodash'
-
+import React, { Component } from "react";
+import "./style.css";
+import _ from "lodash";
 
 class TxPerSec extends Component {
-  
   constructor(props) {
     super(props);
     this.state = {
       data: {}
-      }
+    };
   }
-  
+
   componentWillMount() {
     // Get the block hash from URL arguments (defined by Route pattern)
     this.getDataState(this.props.data);
   }
-  
-  getDataState(data) {
 
+  getDataState(data) {
     // Set the Component state
     this.setState({
       data: data
-    })
+    });
   }
-  
+
   render() {
-      var data = this.state.data.blocks;
+    var data = this.state.data.blocks;
 
-      if (!data.length){
-        return <pre>dead</pre>
-      }
-      var txTotal = 0
-      
-      _.each(data, (value, index) => {
-        txTotal += data[index].transactions.length
-      });
-      var average = Math.round(txTotal / ( data[0].timestamp - data[9].timestamp ) )
+    if (!data.length) {
+      return <pre>dead</pre>;
+    }
+    var txTotal = 0;
 
-    
-      return (
-          <div className="TxPerSec">
-                <div className="card-body">
-                    <h1 className="card-title" style={{textAlign: "center"}}> {average}</h1>
-                </div>
-          </div>
-      );
+    _.each(data, (value, index) => {
+      txTotal += data[index].transactions.length;
+    });
+    var average = Math.round(txTotal / (data[0].timestamp - data[9].timestamp));
+
+    return (
+      <div className="TxPerSec">
+        <div className="card-body">
+          <h1 className="card-title" style={{ textAlign: "center" }}>
+            {" "}
+            {average}
+          </h1>
+        </div>
+      </div>
+    );
   }
 }
 
